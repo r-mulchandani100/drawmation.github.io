@@ -5,8 +5,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <title>Home</title>
@@ -17,12 +18,12 @@ footer {
   padding: 20px;
   background-color: #140d4f;
   color: white;
-  height: 30%;
+  height: 10vw;
   width: 1440px;
   position: relative;
-  top: -205px;
+  top: -180px;
   left: 0px;
-  z-index: 10000;
+  z-index: 10000000;
 }
 hr {
   position: relative;
@@ -31,40 +32,64 @@ hr {
   z-index: 1000000;
 width: 1000000%;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#4EA699 ;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #140D4F;
+}
+
 </style>
 <body>
-
   <div id="playground">
-  <button id="screen" type="button" class="screenbutton"></button>
+    <button id="screen" type="button" class="screenbutton"></button>
+
   <!-- The video -->
-  <video style = "position: relative; left:0px; top:-20px;" width="100%" height="140%" autoplay muted loop id="homescreenvid1">
+  <video style = "position: relative; left:0px; top:0px;" width="1500vw" height="1000vw" autoplay muted loop id="homescreenvid1">
     <source  id = "video1" src="homevideo.mp4">
   </video>
 
-
   <!-- Optional: some overlay text to describe the video -->
-  <nav class="fixed-nav-bar">
+  <nav id="nav" class="fixed-nav-bar">
   <a class = "a" href="home.html">
-  <img src="logo.png" alt="Drawmation Logo" style = "position:relative; left:50px; top:0px;" height = "100%" width = "10vw%" >
+  <img src="logo.png" id="logo1"alt="Drawmation Logo" style = "position:relative; left:50px; top:0px;" height = "110vw" width = "240vw" >
 
-  <a href="pricing.html"<button class= "myButton1" id="price">
-  <span>Pricing</span>
-  </button></a>
-  <div>
+
 
     <a href="animationexamples.html"<button class= "myButton2" id="animex">
     <span>Animation Examples</span>
     </button></a>
+    <div>
 
+    <a href="pricing.html"<button class= "myButton1" id="price">
+    <span>Pricing</span>
+    </button></a>
 
 
 
 </nav>
+<hr style="background-color: black; position: relative; left: -200px;top:-1020px; z-index: 10000; width: 1900px; height:140px; border:none;">
 
 
 <p id="section1"class="paragraph">DRAWMATION</p></div>
 </section>
-<video class = "img" style = "position: relative; left:0px; top:470px;" width="100%" height="140%" autoplay muted loop id="homescreenvid2">
+<video class = "img" style = "position: relative; left:0px; top:470px;" width="1500vw" height="1000vw" autoplay muted loop id="homescreenvid2">
   <source id = "video2" src="graphs.mp4">
 </video>
 
@@ -75,9 +100,8 @@ width: 1000000%;
   <textarea1 class = "text1">enter text here</textarea1>
   <textarea2 class = "text2">enter text here</textarea2>
   <textarea3 class = "text3">enter text here</textarea3>
-  <button onclick="topFunction2()" style="z-index: 100000; height: 30px; width:29px; outline: none; border:none ; background: none; color:none; position:relative; top: -1398px; left: 260px;"></button>
 
-  <i style=" color:white; position:relative; top: -1400px; left: 227px;"class="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
+  <i id="hover-effect" style="color:white; z-index: 10000; position:relative; opacity: 0.5; top: -1640px; left: 290px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
 
 </body>
 <footer
@@ -133,32 +157,33 @@ width: 1000000%;
 
 
 </footer>
-<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " z-index: 10000000; position:relative; left:50px; top:-420px;" height = "18%" width = "20%" >
+<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " z-index: 100000000000; position:relative; left:50px; top:-300px;" height = "100vw" width = "230vw" >
 
 </div>
+<hr style="background-color:#140d4f; position:relative; top:-300px; left:0px; height:300px; border:none;">
 
   <script>
-
   document.getElementById("screen").addEventListener("mouseover", windows);
   document.getElementById("screen").addEventListener("mouseleave", windows);
-
+  document.getElementById("hover-effect").addEventListener("click", topFunction2);
 
   function windows() {
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-    if (w<1179) {
-      document.getElementById("animex").style.visibility = "hidden";
-  }
-    if (w>1179) {
-      document.getElementById("animex").style.visibility = "visible";
-    }
-    if (w<1179) {
-      document.getElementById("price").style.visibility = "hidden";
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      if (w<1179) {
+        document.getElementById("nav").style.visibility = "hidden";
+        document.getElementById("logo1").style.visibility = "visible";
+        document.getElementById("animex").style.visibility = "visible";
+        document.getElementById("price").style.visibility = "visible";
 
-  }
-    if (w>1179) {
-      document.getElementById("price").style.visibility = "visible";
-    }}
+
+    }
+      if (w>1179) {
+        document.getElementById("nav").style.visibility = "visible";
+      }
+
+}
+
 
     function topFunction() {
       document.body.scrollTop = 0;
@@ -171,8 +196,8 @@ width: 1000000%;
 
 
     function topFunction2() {
-      document.body.scrollTop = 670;
-      document.documentElement.scrollTop = 670;
+      document.body.scrollTop = 820;
+      document.documentElement.scrollTop =820;
     }
 
     window.onbeforeunload = function () {
