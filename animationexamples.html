@@ -7,17 +7,18 @@
 </head>
 <title>Animation Examples</title>
 <style>
+body {background-color: white;}
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   background-color: #140d4f;
   color: white;
-  height: 200px;
+  height: 10vw;
   width: 1440px;
   position: relative;
-  top: -200px;
+  top: -180px;
   left: 0px;
-  z-index: 10000;
+  z-index: 10000000;
 }
 hr {
   position: relative;
@@ -26,21 +27,47 @@ hr {
   z-index: 1000000;
 width: 1000000%;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#4EA699 ;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #140D4F;
+}
+
 </style>
 <body>
-  <nav class="fixed-nav-bar">
+  <nav id="nav" class="fixed-nav-bar">
   <a class = "a" href="home.html">
-  <img src="logo.png" alt="Drawmation Logo" style = "position:relative; left:50px; top:0px;" height = "100%" width = "20%" >
+  <img src="logo.png" id="logo1"alt="Drawmation Logo" style = "position:relative; left:50px; top:0px;" height = "110vw" width = "240vw" >
 
 
-  <a href="pricing.html"<button class= "myButton1" id="price">
-  <span>Pricing</span>
-  </button></a>
-  <div>
 
     <a href="animationexamples.html"<button class= "myButton2" id="animex">
     <span>Animation Examples</span>
     </button></a>
+    <div>
+
+    <a href="pricing.html"<button class= "myButton1" id="price">
+    <span>Pricing</span>
+    </button></a>
+
+
 
 </nav>
 <h6 class = "header3">Some of our</h6></div>
@@ -64,7 +91,7 @@ width: 1000000%;
 </div>
 <center><br><br><br><br><br><br><br><br><br><br><br><br><hr></center>
 
-<center><div style=" position: relative; top: 100px; white-space:nowrap;">© 2020 Drawmation</div></center>
+<center><div style=" position: relative; top: 100px; white-space:nowrap;"><code>© 2020 Drawmation</code></div></center>
 
 </footer>
 <footer>
