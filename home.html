@@ -84,6 +84,7 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
 <div id="popup-box">
 
     <img src="close.png" style="position: fixed;top:-3px; left:660px;" id="popup-close" />
+    <button style=" cursor: pointer; width:33px;height: 34px; background:none; outline:none; position: fixed; top:0px; left:663px;" id="clearbutton"></button>
     <div id="popup-box-content">
         <center><h1>Subscribe to The Drawmation Newsletter</h1></center>
         <br>
@@ -281,7 +282,7 @@ document.addEventListener('scroll', function() {
 
 
   $(document).ready(function() {
-      var delay = 2000; // milliseconds
+      var delay = 0; // milliseconds
       var cookie_expire = 0; // days
 
       var cookie = localStorage.getItem("list-builder");
@@ -313,6 +314,10 @@ document.addEventListener('scroll', function() {
 
   });
   $("#closepopup").click(() => {
+      $("#list-builder, #popup-box").hide();
+      localStorage.setItem("list-builder", (new Date()).getTime());
+  });
+  $("#clearbutton").click(() => {
       $("#list-builder, #popup-box").hide();
       localStorage.setItem("list-builder", (new Date()).getTime());
   });
