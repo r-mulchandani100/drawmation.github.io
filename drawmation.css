@@ -131,6 +131,8 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
 		text-decoration:overline;
 		background:linear-gradient(to bottom, #3856f0 5%, #140d4f 100%);
 		background-color:#3856f0;
+    animation-name: fade;
+    animation-duration: 4s;
 	position:relative;
 	top:1px;
 	position: relative;
@@ -178,6 +180,8 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
 	text-decoration: overline;
 	background:linear-gradient(to bottom, #4ea699 5%, #6fedb7 100%);
 	background-color:#6fedb7;
+  animation-name: fade;
+  animation-duration: 4s;
 	position:relative;
 	top:1px;
 	position: relative;
@@ -414,15 +418,15 @@ outline: white;
 
 
 .container {
-  width: 1440px;
+  width: 100vw;
   height: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #140d4f;
   position: relative;
-  top: 400px;
-z-index: 10000000000;
+  top: -40000000px;
+  z-index: 100000000000000000000;
 }
 .container .searchbox {
   position: fixed;
@@ -433,6 +437,9 @@ z-index: 10000000000;
   max-width: 53px;
   transition: .7s linear;
   overflow: hidden;
+  z-index: 100000000000000000000;
+  animation-name: slide;
+  animation-duration: 1s;
 
 }
 .container .searchbox .searchbox__input {
@@ -530,4 +537,99 @@ z-index: 10000000000;
 #hover-effect:hover:before{
 	content:"\f0ab";
   z-index: -1999990;
+}
+
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+}
+
+
+#list-builder {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    filter: alpha(opacity=80);
+	opacity: 0.8;
+    display: none;
+    z-index: 100000000000000000000000;
+;
+
+}
+
+#popup-box {
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    background-color: #140D4F;
+    color: #FFFFFF;
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
+    border: 2px solid #6FEDB7;
+    display: none;
+    z-index: 10000000000000000000;
+}
+
+#popup-close {
+    position: absolute;
+    top: -20px;
+    left: 670px;
+    cursor: pointer;
+    width: 40px;
+    z-index: 1000000000000000000000;
+
+}
+
+#popup-box h1 {
+    margin: 0;
+    z-index: 1000000000000000000000;
+
+}
+
+#popup-box form {
+    margin-bottom: 0px;
+    z-index: 1000000000000000000000;
+
+}
+
+#popup-box input {
+    padding: 10px;
+    border: 1px solid #333;
+    width: 40%;
+    z-index: 100000000000000000;
+
+}
+
+#popup-box button {
+    padding: 10px;
+    border: 1px solid #333;
+    z-index: 10000000000000000000000;
+
+}
+
+.logo {
+
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slide {
+  from {position: fixed;
+    top:30px;
+    left: 1440px;
+  }
+  to {position: fixed;
+  top:30px;
+  left: 998px;}
 }
