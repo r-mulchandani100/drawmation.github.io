@@ -305,7 +305,7 @@ document.addEventListener('scroll', function() {
               });
           });
 
-          $("#popup-close").click(() => {
+          $("popup-close").click(() => {
               $("#list-builder, #popup-box").hide();
               localStorage.setItem("list-builder", (new Date()).getTime());
           });
