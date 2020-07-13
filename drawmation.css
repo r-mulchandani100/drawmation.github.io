@@ -418,8 +418,8 @@ outline: white;
 
 
 .container {
-  width: 100vw;
-  height: 30vw;
+  width: 0vw;
+  height: 0vw;
   display: flex;
   justify-content: center;
   align-items: center;
