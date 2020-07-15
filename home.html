@@ -119,7 +119,7 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
     </div>
 </div>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script class="above" type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script><script> window.start.init({Palette:"palette6",Mode:"floating right",Theme:"block",Message:"This website uses cookies to ensure you get the best experience on our website.",LinkText:"Learn More",Location:"cookiepolicy.html",Time:"1",})</script>
+<script class="above" type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script><script> window.start.init({Palette:"palette6",Mode:"floating right",Theme:"block",Message:"This website uses cookies to ensure you get the best experience on our website.",LinkText:"Learn More",Location:"cookiepolicy.html",Time:"5",})</script>
 </script>
  <div id="playground">
 
@@ -290,8 +290,8 @@ document.addEventListener('scroll', function() {
 
 
   $(document).ready(function() {
-      var delay =000; // milliseconds
-      var cookie_expire = 0; // days
+      var delay =10000; // milliseconds
+      var cookie_expire = 365; // days
 
       var cookie = localStorage.getItem("list-builder");
       if(cookie == undefined || cookie == null) {
