@@ -12,6 +12,9 @@ html
 		overflow-x: hidden;
     scroll-behavior: smooth;
 			}
+h1 {
+  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+  z-index: 1000000000;}
 .paragraph {
     color:purple;
     font-size:4rem;
@@ -20,6 +23,8 @@ html
     top:0px;
     font-weight: bold;
 font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+z-index: 1000000000;
+
 }
 .header1 {
     color:black;
@@ -30,7 +35,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
     font-weight: bold;
     text-decoration: underline;
     font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+    z-index: 1000000000;
 }
 .header2 {
     color:purple;
@@ -39,7 +44,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
     left: 400px;
     top:50px;
     font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+    z-index: 1000000000;
 }
 
 .header3{
@@ -49,7 +54,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
    left: 400px;
   top:100px;
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+  z-index: 1000000000;
 }
 
 .subheader1 {
@@ -60,7 +65,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
   top:-910px;
   font-weight: bold;
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+  z-index: 1000000000;
 }
 
 .subheader2{
@@ -71,7 +76,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
   top:-980px;
   font-weight: bold;
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+  z-index: 1000000000;
 }
 
 .subheader3{
@@ -82,7 +87,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
   top:-1070px;
   font-weight: bold;
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+  z-index: 1000000000;
 }
 
 .text1{
@@ -92,7 +97,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
   left: 40px;
   top: -1100px;
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+  z-index: 1000000000;
 }
 
 .text2{
@@ -102,7 +107,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
   left: 275px;
   top: -1090px;
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-
+  z-index: 1000000000;
 }
 
 .text3{
@@ -112,7 +117,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
   left: 550px;
   top: -1090px;
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-}
+  z-index: 1000000000;}
 
 
 
@@ -223,22 +228,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
 		top:0px;
 }
 
-.screenbutton {
-position: fixed;
-left: 0px;
-top: 0px;
-width: 1500px;
-height: 900px;
-background-color: transparent;
-border-color: white;
-border-top-width: 0px;
-z-index: 9998;
-border-right-width: 0px;
-border-bottom-width: 0px;
-outline: none;
-outline: 0 ;
-outline: white;
-}
+
 
 .header4{
   color:purple;
@@ -300,8 +290,8 @@ outline: white;
   top: 0;
   left: 0;
   z-index: 999999999999999;
-  width: 100vw;
-  height: 8vw;
+  width: 1440px;
+  height: 120px;
   background-color: black;
 }
 
@@ -556,7 +546,7 @@ outline: white;
     filter: alpha(opacity=80);
 	opacity: 0.8;
     display: none;
-    z-index: 100000000000000000000000;
+    z-index: 100000000000000;
 ;
 
 }
@@ -573,7 +563,9 @@ outline: white;
     padding: 30px;
     border: 2px solid #6FEDB7;
     display: none;
-    z-index: 10000000000000000000;
+    z-index: 100000000000000;
+      animation-name: up;
+    animation-duration: 1s;
 }
 
 #popup-close {
@@ -582,35 +574,30 @@ outline: white;
     left: 670px;
     cursor: pointer;
     width: 40px;
-    z-index: 1000000000000000000000;
-
+    z-index: 100000000000000;
 }
 
 #popup-box h1 {
     margin: 0;
-    z-index: 1000000000000000000000;
-
+    z-index: 100000000000000;
 }
 
 #popup-box form {
     margin-bottom: 0px;
-    z-index: 1000000000000000000000;
-
+    z-index: 100000000000000;
 }
 
 #popup-box input {
     padding: 10px;
     border: 1px solid #333;
     width: 40%;
-    z-index: 100000000000000000;
-
+    z-index: 100000000000000;
 }
 
 #popup-box button {
     padding: 10px;
     border: 1px solid #333;
-    z-index: 10000000000000000000000;
-
+    z-index: 100000000000000;
 }
 
 .logo {
@@ -632,4 +619,42 @@ outline: white;
   to {position: fixed;
   top:30px;
   left: 998px;}
+}
+
+
+@keyframes up {
+  from {
+    left: 50%;
+    top: 100%;
+  }
+  to {
+    position: fixed;
+  left: 50%;
+  top: 55%;
+}
+}
+
+.x {
+  animation-name: xbutton;
+  animation-duration: 2s;
+
+}
+
+
+@keyframes xbutton {
+  from {
+    position: fixed;
+    top:-3px; left:660px;
+  }
+  to {
+    position: fixed;
+    top:-3px; left:0px;
+  }
+}
+
+
+
+
+.above {
+  z-index: 1000000000000000000000;
 }
