@@ -84,7 +84,7 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
 <div id="popup-box">
 
     <img src="close.png" style="position: fixed;top:-3px; left:660px;" id="popup-close" />
-    <button style=" cursor: pointer; width:33px;height: 34px; background:none; outline:none; position: fixed; top:0px; left:663px;" id="clearbutton"></button>
+    <button style=" cursor: pointer; width:33px;height: 34px; border: none; background:none; outline:none; position: fixed; top:0px; left:663px;" id="clearbutton"></button>
     <div id="popup-box-content">
         <center><h1>Subscribe to The Drawmation Newsletter</h1></center>
         <br>
@@ -104,7 +104,7 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
         <center><button id="closepopup" style="margin: 10px;" type="submit">Send</button></center>
 
       </form>
-    
+
       <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxhE71FFe4yXZH3Vm-G46B1LZhG2IsHy3_TLHSWqCjrk4CuRPcR/exec'
         const form = document.forms['submit-to-google-sheet']
@@ -119,9 +119,11 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
     </div>
 </div>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <div id="playground">
+<script class="above" type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script><script> window.start.init({Palette:"palette6",Mode:"floating right",Theme:"block",Message:"This website uses cookies to ensure you get the best experience on our website.",LinkText:"Learn More",Location:"cookiepolicy.html",Time:"1",})</script>
+</script>
+ <div id="playground">
 
-    <button id="screen" type="button" class="screenbutton"></button>
+
 
   <!-- The video -->
   <video style = "position: relative; left:0px; top:0px;" width="1500vw" height="1000vw" autoplay muted loop id="homescreenvid1">
@@ -148,7 +150,6 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
     <div class="progress-bar"></div>
 
 </nav>
-<hr style="background-color: black; position: relative; left: -200px;top:-1020px; z-index: 10000; width: 1900px; height:140px; border:none;">
 
 
 <p id="section1"class="paragraph">DRAWMATION</p></div>
@@ -165,7 +166,7 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
   <textarea2 class = "text2">enter text here</textarea2>
   <textarea3 class = "text3">enter text here</textarea3>
 
-  <i id="hover-effect" style="color:white; z-index: 10000; position:relative; opacity: 0.5; top: -1640px; left: 290px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
+  <i id="hover-effect" style="color:white; z-index: 10000; position:relative; opacity: 0.5; top: -1500px; left: 290px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
 
 </body>
 <div class="container">
@@ -210,27 +211,38 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
 </div>
 
   <script>
-  document.getElementById("screen").addEventListener("mouseover", windows);
-  document.getElementById("screen").addEventListener("mouseleave", windows);
+  document.getElementById("popup-box").addEventListener("mouseover", windows1);
+  document.getElementById("list-builder").addEventListener("mouseover", windows2);
+
   document.getElementById("hover-effect").addEventListener("click", topFunction2);
 
-  function windows() {
-      var w = window.innerWidth;
-      var h = window.innerHeight;
-      if (w<1179) {
-        document.getElementById("nav").style.visibility = "hidden";
-        document.getElementById("logo1").style.visibility = "visible";
-        document.getElementById("animex").style.visibility = "visible";
-        document.getElementById("price").style.visibility = "visible";
 
+      function windows1 () {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        if (w<=792) {
+          document.getElementById("popup-close").className="x";
+          document.getElementById("popup-close").style.left = "-3px";
+          document.getElementById("popup-close").style.top = "-3px";
+          document.getElementById("clearbutton").className="x";
+          document.getElementById("clearbutton").style.left = "3px";
+          document.getElementById("clearbutton").style.top = "0px";
 
-    }
-      if (w>1179) {
-        document.getElementById("nav").style.visibility = "visible";
+        }
       }
 
-}
+      function windows2 () {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        if (w>792) {
+          document.getElementById("popup-close").className="y";
+          document.getElementById("popup-close").style.left = "660px";
+          document.getElementById("popup-close").style.top = "-3";
+          document.getElementById("clearbutton").style.left = "663px";
+          document.getElementById("clearbutton").style.top = "0px";
 
+        }
+      }
 
     function topFunction() {
       document.body.scrollTop = 0;
@@ -278,7 +290,7 @@ document.addEventListener('scroll', function() {
 
 
   $(document).ready(function() {
-      var delay = 0; // milliseconds
+      var delay =000; // milliseconds
       var cookie_expire = 0; // days
 
       var cookie = localStorage.getItem("list-builder");
@@ -317,7 +329,6 @@ document.addEventListener('scroll', function() {
       $("#list-builder, #popup-box").hide();
       localStorage.setItem("list-builder", (new Date()).getTime());
   });
-
 
 
   </script>
