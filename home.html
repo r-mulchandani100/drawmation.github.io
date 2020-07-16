@@ -119,8 +119,11 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
     </div>
 </div>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script class="above" type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script><script> window.start.init({Palette:"palette6",Mode:"floating right",Theme:"block",Message:"This website uses cookies to ensure you get the best experience on our website.",LinkText:"Learn More",Location:"cookiepolicy.html",Time:"5",})</script>
-</script>
+
+<div id="cookieConsent">
+    <div id="closeCookieConsent">x</div>
+    This website is using cookies. <a href="#" target="_blank"></a> <a id="ok" class="cookieConsentOK">That's Fine</a>
+</div>
  <div id="playground">
 
 
@@ -146,6 +149,16 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
     <span>Pricing</span>
     </button></a>
 
+    <div class="popup" id="info" onclick="myFunction()">More info...
+      <div class="popuptext" id="myPopup">
+
+
+
+
+
+
+      </div>
+    </div>
     <!-- This is the bar which shows scroll percentage -->
     <div class="progress-bar"></div>
 
@@ -331,5 +344,36 @@ document.addEventListener('scroll', function() {
   });
 
 
+
+
+
+
+
+
+
+
+
+
+
+  $(document).ready(function(){
+    setTimeout(function () {
+        $("#cookieConsent").fadeIn(200);
+     }, 1000);
+    $("#closeCookieConsent, .cookieConsentOK").click(function() {
+        $("#cookieConsent").fadeOut(200);
+        $("#info").fadeOut(200);
+
+    });
+
+$( "#info" ).slideUp(0).delay(1000).fadeIn(200);
+
+
+});
+
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
   </script>
 </html>
