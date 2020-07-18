@@ -75,6 +75,7 @@ width: 1000000%;
 }
 </style>
 <body>
+  <table width="1440">
 <script>
 window.onload = function() {document.body.scrollTop = document.documentElement.scrollTop = 0;};
 
@@ -122,14 +123,17 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
 
 <div id="cookieConsent">
     <div id="closeCookieConsent">x</div>
-    This website is using cookies. <a href="#" target="_blank"></a> <a id="ok" class="cookieConsentOK">That's Fine</a>
+    This website is using cookies. <a id="ok" class="cookieConsentOK">That's Fine</a>
+    <div class="popup" onclick="myFunction()">More info...
+  <span class="popuptext" id="myPopup">Popup text...</span>
+</div>
 </div>
  <div id="playground">
 
 
 
   <!-- The video -->
-  <video style = "position: relative; left:0px; top:0px;" width="1500vw" height="1000vw" autoplay muted loop id="homescreenvid1">
+  <video style = "position: relative; left:0px; top:0px;" width="1500vw" height="1000px" autoplay muted loop id="homescreenvid1">
     <source  id = "video1" src="homevideo.mp4">
   </video>
 
@@ -149,22 +153,50 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
     <span>Pricing</span>
     </button></a>
 
-    <div class="popup" id="info" onclick="myFunction()">More info...
-      <div class="popuptext" id="myPopup">
 
 
 
 
 
 
-      </div>
-    </div>
+
     <!-- This is the bar which shows scroll percentage -->
     <div class="progress-bar"></div>
+    <div id="chat-circle" class="btn btn-raised">
+            <div id="chat-overlay"></div>
+            <i style="float: left; position: relative; left: -15px; top: -15px;" class="fa fa-commenting fa-2x" aria-hidden="true"></i>
+    	</div>
 
+      <div id="chatbox" class="chat-box">
+        <div class="chat-box-header">
+          Message Us!
+          <span class="chat-box-toggle"><i class="fa fa-times-circle" aria-hidden="true"></i>
+    </span>
+        </div>
+        <div class="chat-box-body">
+          <div class="chat-box-overlay">
+          </div>
+          <div class="chat-logs">
+
+          </div><!--chat-log -->
+        </div>
+        <div class="chat-input" >
+          <form>
+            <input type="text"  id="chat-input" placeholder="Send a message..."/>
+          <button type="submit" class="chat-submit" id="chat-submit"><i style="color: white; position: absolute; left: 0px; top: 0%; "class="fa fa-paper-plane fa-2x" aria-hidden="true"></i></button>
+          </form>
+        </div>
+      </div>
 </nav>
 
 
+
+
+
+
+
+
+</div>
 <p id="section1"class="paragraph">DRAWMATION</p></div>
 </section>
 <video class = "img" style = "position: relative; left:0px; top:470px;" width="1500vw" height="1000vw" autoplay muted loop id="homescreenvid2">
@@ -179,7 +211,7 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
   <textarea2 class = "text2">enter text here</textarea2>
   <textarea3 class = "text3">enter text here</textarea3>
 
-  <i id="hover-effect" style="color:white; z-index: 10000; position:relative; opacity: 0.5; top: -1500px; left: 290px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
+  <i id="hover-effect" style="color:white; z-index: 10000; position:relative; opacity: 0.5; top: -1500px; left: 303px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
 
 </body>
 <div class="container">
@@ -304,11 +336,16 @@ document.addEventListener('scroll', function() {
 
   $(document).ready(function() {
       var delay =10000; // milliseconds
+      var delay2 =5000; // milliseconds
       var cookie_expire = 365; // days
 
       var cookie = localStorage.getItem("list-builder");
+      var cookie2 = localStorage.getItem("cookieConsent");
       if(cookie == undefined || cookie == null) {
           cookie = 0;
+      }
+      if(cookie2 == undefined || cookie2 == null) {
+          cookie2 = 0;
       }
 
       if(((new Date()).getTime() - cookie) / (1000 * 60 * 60 * 24) > cookie_expire) {
@@ -333,6 +370,32 @@ document.addEventListener('scroll', function() {
           });
       }
 
+
+
+      if(((new Date()).getTime() - cookie2) / (1000 * 60 * 60 * 24) > cookie_expire) {
+          $("#cookieConsent").delay(delay2).fadeIn("fast", () => {
+          });
+
+
+
+          $("#ok",).click(() => {
+              $("#cookieConsent").hide();
+              localStorage.setItem("cookieConsent", (new Date()).getTime());
+          });
+          $("#closeCookieConsent",).click(() => {
+              $("#cookieConsent").hide();
+              localStorage.setItem("cookieConsent", (new Date()).getTime());
+          });
+
+      }
+
+
+
+
+
+
+
+
   });
   $("#closepopup").click(() => {
       $("#list-builder, #popup-box").hide();
@@ -355,25 +418,209 @@ document.addEventListener('scroll', function() {
 
 
 
-  $(document).ready(function(){
-    setTimeout(function () {
-        $("#cookieConsent").fadeIn(200);
-     }, 1000);
-    $("#closeCookieConsent, .cookieConsentOK").click(function() {
-        $("#cookieConsent").fadeOut(200);
-        $("#info").fadeOut(200);
-
-    });
-
-$( "#info" ).slideUp(0).delay(1000).fadeIn(200);
-
-
-});
 
 // When the user clicks on <div>, open the popup
 function myFunction() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
 }
+
+
+
+$(function() {
+  var INDEX = 0;
+  $("#chat-submit").click(function(e) {
+    e.preventDefault();
+    var msg = $("#chat-input").val();
+    var res = "We will get back to you";
+    var helloq = msg.includes("hi")|| msg.includes("hello")|| msg.includes("Hello") || msg.includes("Hi");
+    var hello ="Hello. How are you?";
+    var n = msg.includes("good")|| msg.includes("fine")|| msg.includes("great")|| msg.includes("ok")|| msg.includes("Good")|| msg.includes("Fine")|| msg.includes("Great")|| msg.includes("Ok")|| msg.includes("OK")|| msg.includes("nice")|| msg.includes("Nice");
+    var m = msg.includes("not");
+    var good ="That's great!";
+    var replyq = msg.includes("how are you")||msg.includes("How are you")||msg.includes("how are you?")||msg.includes("How are you?")||msg.includes("how r u?")||msg.includes("how r u")||msg.includes("How r u?")||msg.includes("How r u");
+    var reply = Array("I'm good, thanks!","I'm great, thanks!","I'm OK, thanks!","I'm fine, thanks!","I'm well, thanks!");
+    var reply = reply[Math.floor(Math.random() * reply.length)];
+    var price1 = (msg.includes("how much")&&msg.includes("30"))||(msg.includes("How much")&&msg.includes("30"));
+    var pricereply1 ="A 30 second animation is $200.";
+    var price2 = (msg.includes("how much")&&msg.includes("60"))||(msg.includes("How much")&&msg.includes("60"));
+    var pricereply2 ="A 60 second animation is $300.";
+    var price3 = (msg.includes("how much")&&msg.includes("90"))||(msg.includes("How much")&&msg.includes("90"));
+    var pricereply3 ="A 90 second animation is $400.";
+    var nameq = msg.includes("your name")|| msg.includes("Your name")||msg.includes("ur name")||msg.includes("Ur name");
+    var name = "My name is Robbie.";
+    var timeq = (msg.includes("how long")||msg.includes("How long")||msg.includes("how much time"))||(msg.includes("How much time"))||(msg.includes("when") && msg.includes("my") && msg.includes("done"));
+    var time = "Your order will be complete in 2-3 weeks";
+    var helpq = (msg.includes("help")||msg.includes("Help"))&&!(msg.includes("with")||msg.includes("With"));
+    var help = "What do you need help with?";
+    var pricingq = msg.includes("price")||msg.includes("pricing")||msg.includes("prices")||msg.includes("Price")||msg.includes("Pricing")||msg.includes("Prices");
+    var pricing = "Here are our prices: 30 second animation: $200, 60 second animation: $300, 90 second animation: $400.";
+    var intro = "Hi my name is Robbie, how can I help?"
+    var endq= msg.includes("thanks")||msg.includes("Thanks")||msg.includes("thank")||msg.includes("Thank")||msg.includes("thank you")||msg.includes("Thank you")||msg.includes("thank u")||msg.includes("Thank u");
+    var end = Array("You're welcome!","My pleasure!","Of course!","No problem!","Glad I could help!");
+    var end = end[Math.floor(Math.random() * end.length)];
+if (price1==true){
+  setTimeout(function() {
+    generate_message(pricereply1, 'user');
+  }, 1000)
+
+}
+if (price2==true){
+  setTimeout(function() {
+    generate_message(pricereply2, 'user');
+  }, 1000)
+}
+if (price3==true){
+  setTimeout(function() {
+    generate_message(pricereply3, 'user');
+  }, 1000)
+}
+
+
+
+if (timeq==true) {
+  setTimeout(function() {
+    generate_message(time, 'user');
+  }, 1000)
+}
+
+
+
+if (n==true && m==false){
+  setTimeout(function() {
+    generate_message(good, 'user');
+  }, 1000)
+}
+    if(msg.trim() == ''){
+      return false;
+    }
+    generate_message(msg, 'self');
+    var buttons = [
+        {
+          name: 'Existing User',
+          value: 'existing'
+        },
+        {
+          name: 'New User',
+          value: 'new'
+        }
+      ];
+      if (helloq==true) {
+        setTimeout(function() {
+          generate_message(hello, 'user');
+        }, 1000)
+      }
+
+      if (replyq==true) {
+        setTimeout(function() {
+          generate_message(reply, 'user');
+        }, 2000)
+      }
+
+
+
+
+
+      if (nameq==true) {
+        setTimeout(function() {
+          generate_message(name, 'user');
+      }, 1000)
+    }
+
+    if (helpq==true) {
+      setTimeout(function() {
+        generate_message(help, 'user');
+    }, 1000)
+    }
+    if (pricingq==true) {
+      setTimeout(function() {
+        generate_message(pricing, 'user');
+    }, 1000)
+    }
+
+if (endq==true){
+  setTimeout(function() {
+    generate_message(end, 'user');
+}, 1000)
+}
+  })
+
+
+  function generate_message(msg, type) {
+    INDEX++;
+    var str="";
+    str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+    str += "          <span class=\"msg-avatar\">";
+    str += "          <\/span>";
+    str += "          <div class=\"cm-msg-text\">";
+    str += msg;
+    str += "          <\/div>";
+    str += "        <\/div>";
+    $(".chat-logs").append(str);
+    $("#cm-msg-"+INDEX).hide().fadeIn(300);
+    if(type == 'self'){
+     $("#chat-input").val('');
+    }
+    $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+  }
+
+  function generate_button_message(msg, buttons){
+    /* Buttons should be object array
+      [
+        {
+          name: 'Existing User',
+          value: 'existing'
+        },
+        {
+          name: 'New User',
+          value: 'new'
+        }
+      ]
+    */
+    INDEX++;
+    var btn_obj = buttons.map(function(button) {
+       return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
+    }).join('');
+    var str="";
+    str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
+    str += "          <span class=\"msg-avatar\">";
+    str += "          <\/span>";
+    str += "          <div class=\"cm-msg-text\">";
+    str += msg;
+    str += "          <\/div>";
+    str += "          <div class=\"cm-msg-button\">";
+    str += "            <ul>";
+    str += btn_obj;
+    str += "            <\/ul>";
+    str += "          <\/div>";
+    str += "        <\/div>";
+    $(".chat-logs").append(str);
+    $("#cm-msg-"+INDEX).hide().fadeIn(300);
+    $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+    $("#chat-input").attr("disabled", true);
+  }
+
+  $(document).delegate(".chat-btn", "click", function() {
+    var value = $(this).attr("chat-value");
+    var name = $(this).html();
+    $("#chat-input").attr("disabled", false);
+    generate_message("name, 'self'");
+  })
+
+  $("#chat-circle").click(function() {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+
+  })
+
+  $(".chat-box-toggle").click(function() {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+
+  })
+})
+
+
+
   </script>
 </html>
