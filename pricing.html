@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="favicon.ico?v1" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 
 </head>
@@ -18,12 +21,12 @@ footer {
   padding: 20px;
   background-color: #140d4f;
   color: white;
-  height: 10vw;
+  height: 16vw;
   width: 1440px;
   position: relative;
-  top: -180px;
+  top: 250px;
   left: 0px;
-  z-index: 10000000;
+  z-index: 1000000000;
 }
 hr {
   position: relative;
@@ -57,6 +60,7 @@ width: 1000000%;
 
 </style>
 <body>
+
   <div id="playground">
     <button id="screen" type="button" class="screenbutton"></button>
   <video style = "position: relative; left:0px; top:0px;" width="1500vw" height="1000vw" autoplay muted loop id="pricingscreenvid1">
@@ -84,50 +88,108 @@ width: 1000000%;
 <h5 class = "header2">Check out our</h5></div>
 <h8 class = "header5">LOW PRICES!</h8></div>
 
-<img src="pricing.png" alt="pricing screenshot" style = "position:relative; left:325px; top:-50px;" height = "60%" width = "50%" >
-<i id="hover-effect" style="color:black; z-index: 10000; position:relative; opacity: 0.5; top: -500px; left: 290px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
+<center><i id="hover-effect" style="color:black; z-index: 10000; position:relative; opacity: 0.5; top: -880px; left: 0px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i></center>
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="price1.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="price2.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="price3.png" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<div style="width: 300px; "id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=Ae2J0Vl8zYJ61jcUhn8JiltAoWbmPay6BwKnvQ7H3tlHztYzlubuhTitYU1nt3y4SJeHK8dXRswD0m-s&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'black',
+          layout: 'vertical',
+          label: 'pay',
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '200'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
 
 </body>
-<footer
-
 <div class="container">
-  <a class="searchbox">
-    <input style="color: white;"type="text" class="searchbox__input" placeholder="Search..." />
-    <svg class="searchbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
-      <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
-    </svg>
-  </a>
+<a class="searchbox">
 
+<input id="keywords" size="24" style="color: white;"type="text" class="searchbox__input" placeholder="Search..." ></p>
+<svg class="searchbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+  <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
+</svg>
+</a>
 </div>
-<center><br><br><br><br><br><br><br><br><br><br><br><br><hr></center>
-
-<center><div style=" position: relative; top: 100px; white-space:nowrap;"><code>© 2020 Drawmation</code></div></center>
-
-</footer>
 <footer>
 
 
 
-  <i class="fa fa-envelope" aria-hidden="true" style="position: relative; left:-150px; top:50px;"></i>
 
-<code><a href="mailto:rishimulchandani100@gmail.com" style="color: white;text-decoration: none; position: relative; left:-150px; top:50px;">E-mail Us</a></a></code>
 
-<i class="fa fa-lock" aria-hidden="true" style="position: relative; left: -60px; top:50px;"></i>
-
-<code><a href="privacypolicy.html" style="color: white;text-decoration: none; position: relative; left: -60px; top:50px;">Privacy Policy</a></code>
-
-<i class="fa fa-file" aria-hidden="true" style="position: relative; left: 40px; top:50px;"></i>
-
-<code><a href="termsandconditions.html" style="color: white;text-decoration: none; position: relative; left: 40px; top:50px;">Terms & Conditions</a></code>
+<center><div style=" position: relative; top: 150px; white-space:nowrap;"><code>© 2020 Drawmation</code></div></center>
 
 
 
+<hr style="background-color: white; height:.2vw; position: relative; top: 110px; ">
+
+  <i class="fa fa-envelope" aria-hidden="true" style="position: relative; left:0px; top:-80px;"></i>
+
+<code><a href="mailto:rishimulchandani100@gmail.com" target="_blank" style="color: white;text-decoration: none; position: relative; left:0px; top:-80px;">E-mail Us</a></a></code>
+
+<i class="fa fa-lock" aria-hidden="true" style="position: relative; left: 100px; top:-80px;"></i>
+
+<code><a href="privacypolicy.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 100px; top:-80px;">Privacy Policy</a></code>
+
+<i class="fa fa-file" aria-hidden="true" style="position: relative; left: 200px; top:-80px;"></i>
+
+<code><a href="termsandconditions.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 200px; top:-80px;">Terms & Conditions</a></code>
+
+
+
+<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " z-index: 10000000000000; position:relative; left:-690px; top:-40px;" height = "100vw" width = "230vw" >
 
 </footer>
-<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " z-index: 100000000000; position:relative; left:50px; top:-300px;" height = "100vw" width = "230vw" >
 
 </div>
-<hr style="background-color:#140d4f; position:relative; top:-300px; left:0px; height:300px; border:none;">
 <script>
 document.getElementById("screen").addEventListener("mouseover", windows);
 document.getElementById("screen").addEventListener("mouseleave", windows);
@@ -181,6 +243,35 @@ function windows() {
       myHilitor2.apply(this.value);
     }, false);
   }, false);
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
 
 </script>
 </html>
+<!-- Slideshow container -->
