@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -10,8 +13,8 @@
   <link rel="icon" href="favicon.ico?v1" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
 </head>
 <title>Pricing</title>
 <style>
@@ -24,7 +27,7 @@ footer {
   height: 16vw;
   width: 1440px;
   position: relative;
-  top: 220px;
+  top: 20px;
   left: 0px;
   z-index: 1000000000;
 }
@@ -126,19 +129,63 @@ width: 1000000%;
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-<div id="buy" style="background-color: black; position: relative; top: 30px; height: 745px;">
-<div style="background-color: black;">
+<div id="buy" style="background-color: black; position: relative; top: 30px; height: 1545px;">
+  <div style="background-color: black;">
+
+
+  <!--30 second animation-->
+  <div>
+      <video controls volume="0.1" poster="thumbnail1.png" id='video2' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: 50px; left: 150px;">
+      <source src="ex1.mov"></source>
+      </video>
+      <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 70px; left: 270px;">
+        30 Second Animation
+  </div>
+  <div style="width: 300px; position:relative; top: 100px; left: 265px; "id="paypal-button-container1"></div>
+  </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=Ae2J0Vl8zYJ61jcUhn8JiltAoWbmPay6BwKnvQ7H3tlHztYzlubuhTitYU1nt3y4SJeHK8dXRswD0m-s&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    paypal.Buttons({
+        style: {
+            shape: 'pill',
+            color: 'black',
+            layout: 'vertical',
+            label: 'pay',
+
+        },
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '200'
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            });
+        }
+    }).render('#paypal-button-container1');
+  </script>
+
+
+
+
+
+
+  <!--60 second animation-->
 
 <div>
-    <video controls volume="0.1" poster="thumbnail1.png" id='video2' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: 50px; left: 850px;">
-    <source src="ex1.mov"></source>
+    <video controls volume="0.1" poster="thumbnail2.png" id='video3' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: -442px; left: 790px;">
+    <source src="ex2.mov"></source>
     </video>
-    <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 70px; left: 875px;">
-      60 Second Whiteboard Animation
+    <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -422px; left: 910px;">
+      60 Second Animation
 </div>
-<div style="width: 300px; position:relative; top: 100px; left: 965px; "id="paypal-button-container"></div>
+<div style="width: 300px; position:relative; top: -392px; left: 905px; "id="paypal-button-container2"></div>
 </div>
-<script src="https://www.paypal.com/sdk/js?client-id=Ae2J0Vl8zYJ61jcUhn8JiltAoWbmPay6BwKnvQ7H3tlHztYzlubuhTitYU1nt3y4SJeHK8dXRswD0m-s&currency=USD" data-sdk-integration-source="button-factory"></script>
 <script>
   paypal.Buttons({
       style: {
@@ -152,7 +199,7 @@ width: 1000000%;
           return actions.order.create({
               purchase_units: [{
                   amount: {
-                      value: '.01'
+                      value: '300'
                   }
               }]
           });
@@ -162,8 +209,50 @@ width: 1000000%;
               alert('Transaction completed by ' + details.payer.name.given_name + '!');
           });
       }
-  }).render('#paypal-button-container');
+  }).render('#paypal-button-container2');
 </script>
+
+
+
+
+<!--90 second animation-->
+
+<div>
+  <video controls volume="0.1" poster="thumbnail3.png" id='video4' style="outline: none; border: solid 5px  gray; height: 120px; width: 513px; min-width: 430px; min-height: 247px; position:relative; top: -270px; left: 150px;">
+  <source src="ex3.mov"></source>
+  </video>
+  <div id="90sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -250px; left: 270px;">
+    90 Second Animation
+</div>
+<div style="width: 300px; position:relative; top: -220px; left: 265px; "id="paypal-button-container3"></div>
+</div>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'black',
+          layout: 'vertical',
+          label: 'pay',
+
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '400'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container3');
+</script>
+
+
 </body>
 <div class="container">
 <a class="searchbox">
@@ -307,21 +396,46 @@ document.getElementById("nav").className="fixed-nav-bar";
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
   }
-  document.getElementById("video2").addEventListener("mouseover", play);
-  document.getElementById("video2").addEventListener("mouseout", pause);
+  document.getElementById("video2").addEventListener("mouseover", play1);
+  document.getElementById("video2").addEventListener("mouseout", pause1);
 
-  function play(){
+  function play1(){
     var mediaElement = document.getElementById('video2');
     mediaElement.play();
     var vid = document.getElementById("video2");
     vid.volume = 0.2;
   }
-  function pause(){
+  function pause1(){
     var mediaElement = document.getElementById('video2');
     mediaElement.pause();
   }
 
+  document.getElementById("video3").addEventListener("mouseover", play2);
+  document.getElementById("video3").addEventListener("mouseout", pause2);
 
+  function play2(){
+    var mediaElement = document.getElementById('video3');
+    mediaElement.play();
+    var vid = document.getElementById("video3");
+    vid.volume = 0.2;
+  }
+  function pause2(){
+    var mediaElement = document.getElementById('video3');
+    mediaElement.pause();
+  }
+  document.getElementById("video4").addEventListener("mouseover", play3);
+  document.getElementById("video4").addEventListener("mouseout", pause3);
+
+  function play3(){
+    var mediaElement = document.getElementById('video4');
+    mediaElement.play();
+    var vid = document.getElementById("video4");
+    vid.volume = 0.2;
+  }
+  function pause3(){
+    var mediaElement = document.getElementById('video4');
+    mediaElement.pause();
+  }
 
 </script>
 </html>
