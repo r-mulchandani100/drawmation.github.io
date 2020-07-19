@@ -286,6 +286,8 @@ z-index: 1000000000;
 
 
 .fixed-nav-bar {
+  transition: background-color 1s linear;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -293,6 +295,17 @@ z-index: 1000000000;
   width: 100vw;
   height: 120px;
   background-color: black;
+}
+.fixed-nav-bar2 {
+  transition: background-color 1s linear;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999999999;
+  width: 100vw;
+  height: 120px;
+  background-color: gray;
 }
 
 .a {
@@ -1000,10 +1013,11 @@ to {opacity:1 ;}
 
 /* Slideshow container */
 .slideshow-container {
-max-width: 1000px;
+max-width: 1440px;
 position: relative;
 margin: auto;
-background-color: black;
+background-color: none;
+border: none;
 }
 
 /* Hide the images by default */
@@ -1051,11 +1065,14 @@ text-align: center;
 
 /* Number text (1/3 etc) */
 .numbertext {
-color: black;
-font-size: 12px;
+color: white;
+font-weight: 600;
+font-size: 14px;
 padding: 8px 12px;
 position: absolute;
 top: 0;
+font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+
 }
 
 /* The dots/bullets/indicators */
@@ -1116,4 +1133,33 @@ border-radius: 3px 0 0 3px;
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
 background-color: rgba(0,0,0,0.8);
+}
+
+
+.purchbtn {
+	background:linear-gradient(to bottom, #f09738 5%, #e8d933 100%);
+	background-color:#f09738;
+	border-radius:10px;
+	border:1px solid #eba415;
+	display:inline-block;
+	cursor:pointer;
+	color:#ff0f0f;
+  font-weight: 700;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #fab300;
+  outline: none;
+  position: relative;
+  float: left;
+  top:-20px;
+}
+.purchbtn:hover {
+	background:linear-gradient(to bottom, #e8d933 5%, #f09738 100%);
+	background-color:#e8d933;
+}
+.purchbtn:active {
+	position:relative;
+	top:1px;
 }
