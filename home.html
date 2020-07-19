@@ -1,0 +1,626 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<link rel="stylesheet" href="drawmation.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" /><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="favicon.ico?v1" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+</head>
+<title>Home</title>
+<style>
+body {
+  background-color: white;
+  padding: 0; margin: 0;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #140d4f;
+  color: white;
+  height:200px;
+  width: 1440px;
+  position: relative;
+  top: 250px;
+  left: 0px;
+  z-index: 1000000000;
+}
+hr {
+  position: relative;
+  top: 300px;
+  left: -800px;
+  z-index: 1000000000;
+width: 1000000%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#4EA699 ;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #140D4F;
+}
+
+
+.progress-bar {
+    background: linear-gradient(to right, white var(--scroll), transparent 0);
+    background-repeat: no-repeat;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    z-index: 1;
+}
+</style>
+<body>
+  <table width="1440">
+<script>
+window.onload = function() {document.body.scrollTop = document.documentElement.scrollTop = 0;};
+
+</script>
+
+<div id="list-builder"></div>
+<div id="popup-box">
+
+    <img src="close.png" style="position: fixed;top:-3px; left:660px;" id="popup-close" />
+    <button style=" cursor: pointer; width:33px;height: 34px; border: none; background:none; outline:none; position: fixed; top:0px; left:663px;" id="clearbutton"></button>
+    <div id="popup-box-content">
+        <center><h1>Subscribe to The Drawmation Newsletter</h1></center>
+        <br>
+        <center><p>
+            Stay up to date on the latest offers and deals, plus receive exclusive rewards by
+            subscribing to our newsletter.
+            <br>
+            <br>
+        </p></center>
+        <form name="submit-to-google-sheet">
+        <center><input name="email" type="email" placeholder="Email" required></center>
+        <br>
+        <center><input name="firstName" placeholder="First Name">
+        <input name="lastName" type="text" placeholder="Last Name">
+      </center>
+        <br>
+        <center><button id="closepopup" style="margin: 10px;" type="submit">Send</button></center>
+
+      </form>
+
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxhE71FFe4yXZH3Vm-G46B1LZhG2IsHy3_TLHSWqCjrk4CuRPcR/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<div id="cookieConsent">
+    <div id="closeCookieConsent">x</div>
+    This website is using cookies. <a id="ok" class="cookieConsentOK">That's Fine</a>
+    <div class="popup" onclick="myFunction()">More info...
+  <span class="popuptext" id="myPopup">Popup text...</span>
+</div>
+</div>
+ <div id="playground">
+
+
+
+  <!-- The video -->
+  <video style = "position: relative; left:0px; top:0px;" width="1500vw" height="1000px" autoplay muted loop id="homescreenvid1">
+    <source  id = "video1" src="homevideo.mp4">
+  </video>
+
+  <!-- Optional: some overlay text to describe the video -->
+  <nav id="nav" class="fixed-nav-bar">
+  <a class = "a" href="home.html">
+  <img src="logo.png" id="logo1" class="logo" alt="Drawmation Logo" style = "position:relative; left:50px; top:0px;" height = "110vw" width = "240vw" >
+
+
+
+    <a href="animationexamples.html"<button class= "myButton2" id="animex">
+    <span>Animation Examples</span>
+    </button></a>
+    <div>
+
+    <a href="pricing.html"<button class= "myButton1" id="price">
+    <span>Pricing</span>
+    </button></a>
+
+
+
+
+
+
+
+
+    <!-- This is the bar which shows scroll percentage -->
+    <div class="progress-bar"></div>
+    <div id="chat-circle" class="btn btn-raised">
+            <div id="chat-overlay"></div>
+            <i style="float: left; position: relative; left: -15px; top: -15px;" class="fa fa-commenting fa-2x" aria-hidden="true"></i>
+    	</div>
+
+      <div id="chatbox" class="chat-box">
+        <div class="chat-box-header">
+          Message Us!
+          <span class="chat-box-toggle"><i class="fa fa-times-circle" aria-hidden="true"></i>
+    </span>
+        </div>
+        <div class="chat-box-body">
+          <div class="chat-box-overlay">
+          </div>
+          <div class="chat-logs">
+
+          </div><!--chat-log -->
+        </div>
+        <div class="chat-input" >
+          <form>
+            <input type="text"  id="chat-input" placeholder="Send a message..."/>
+          <button type="submit" class="chat-submit" id="chat-submit"><i style="color: white; position: absolute; left: 0px; top: 0%; "class="fa fa-paper-plane fa-2x" aria-hidden="true"></i></button>
+          </form>
+        </div>
+      </div>
+</nav>
+
+
+
+
+
+
+
+
+</div>
+<p id="section1"class="paragraph">DRAWMATION</p></div>
+</section>
+<video class = "img" style = "position: relative; left:0px; top:470px;" width="1500vw" height="1000vw" autoplay muted loop id="homescreenvid2">
+  <source id = "video2" src="graphs.mp4">
+</video>
+
+  <h1 class = "header1">About</h1>
+  <h2 class = "subheader1">What We Do:</h2>
+  <h3 class = "subheader2">What We Offer:</h3>
+  <h4 class = "subheader3">Why Choose Drawmation:</h4>
+  <textarea1 class = "text1">enter text here</textarea1>
+  <textarea2 class = "text2">enter text here</textarea2>
+  <textarea3 class = "text3">enter text here</textarea3>
+
+  <i id="hover-effect" style="color:white; z-index: 10000; position:relative; opacity: 0.5; top: -1500px; left: 303px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
+
+</body>
+<div class="container">
+<a class="searchbox">
+
+<input id="keywords" size="24" style="color: white;"type="text" class="searchbox__input" placeholder="Search..." ></p>
+<svg class="searchbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+  <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
+</svg>
+</a>
+</div>
+<footer>
+
+
+
+
+
+<center><div style=" position: relative; top: 150px; white-space:nowrap;"><code>© 2020 Drawmation</code></div></center>
+
+
+
+<hr style="background-color: white; height:.2vw; position: relative; top: 110px; ">
+
+  <i class="fa fa-envelope" aria-hidden="true" style="position: relative; left:0px; top:-80px;"></i>
+
+<code><a href="mailto:rishimulchandani100@gmail.com" target="_blank" style="color: white;text-decoration: none; position: relative; left:0px; top:-80px;">E-mail Us</a></a></code>
+
+<i class="fa fa-lock" aria-hidden="true" style="position: relative; left: 100px; top:-80px;"></i>
+
+<code><a href="privacypolicy.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 100px; top:-80px;">Privacy Policy</a></code>
+
+<i class="fa fa-file" aria-hidden="true" style="position: relative; left: 200px; top:-80px;"></i>
+
+<code><a href="termsandconditions.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 200px; top:-80px;">Terms & Conditions</a></code>
+
+
+
+<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " cursor: pointer; z-index: 10000000000000; position:relative; left:-690px; top:-40px;" height = "100vw" width = "230vw" >
+
+</footer>
+
+</div>
+
+  <script>
+  document.getElementById("popup-box").addEventListener("mouseover", windows1);
+  document.getElementById("list-builder").addEventListener("mouseover", windows2);
+
+  document.getElementById("hover-effect").addEventListener("click", topFunction2);
+
+
+      function windows1 () {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        if (w<=792) {
+          document.getElementById("popup-close").className="x";
+          document.getElementById("popup-close").style.left = "-3px";
+          document.getElementById("popup-close").style.top = "-3px";
+          document.getElementById("clearbutton").className="x";
+          document.getElementById("clearbutton").style.left = "3px";
+          document.getElementById("clearbutton").style.top = "0px";
+
+        }
+      }
+
+      function windows2 () {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        if (w>792) {
+          document.getElementById("popup-close").className="y";
+          document.getElementById("popup-close").style.left = "660px";
+          document.getElementById("popup-close").style.top = "-3";
+          document.getElementById("clearbutton").style.left = "663px";
+          document.getElementById("clearbutton").style.top = "0px";
+
+        }
+      }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+
+
+    function topFunction2() {
+      document.body.scrollTop = 820;
+      document.documentElement.scrollTop =820;
+    }
+
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+
+
+    var element = document.documentElement,
+  body = document.body,
+  scrollTop = 'scrollTop',
+  scrollHeight = 'scrollHeight',
+  progress = document.querySelector('.progress-bar'),
+  scroll;
+
+document.addEventListener('scroll', function() {
+  scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+  progress.style.setProperty('--scroll', scroll + '%');
+});
+  </script>
+
+  <script src="hilitor.js"></script>
+  <script>
+
+    window.addEventListener("DOMContentLoaded", function(e) {
+      var myHilitor2 = new Hilitor("playground1");
+      myHilitor2.setMatchType("left");
+      document.getElementById("keywords").addEventListener("keyup", function(e) {
+        myHilitor2.apply(this.value);
+      }, false);
+    }, false);
+
+
+  $(document).ready(function() {
+      var delay =10000; // milliseconds
+      var delay2 =5000; // milliseconds
+      var cookie_expire = 365; // days
+
+      var cookie = localStorage.getItem("list-builder");
+      var cookie2 = localStorage.getItem("cookieConsent");
+      if(cookie == undefined || cookie == null) {
+          cookie = 0;
+      }
+      if(cookie2 == undefined || cookie2 == null) {
+          cookie2 = 0;
+      }
+
+      if(((new Date()).getTime() - cookie) / (1000 * 60 * 60 * 24) > cookie_expire) {
+          $("#list-builder").delay(delay).fadeIn("fast", () => {
+              $("#popup-box").fadeIn("slow", () => {});
+          });
+
+          $("button[name=subscribe]").click(() => {
+              $.ajax({
+                  type: "POST",
+                  url: $("#popup-form").attr("action"),
+                  data: $("#popup-form").serialize(),
+                  success: (data) => {
+                      $("#popup-box-content").html("<p style='text-align: center'>Thank you for subscribing to the Drawmation newsletter!</p>");
+                  }
+              });
+          });
+
+          $("#popup-close").click(() => {
+              $("#list-builder, #popup-box").hide();
+              localStorage.setItem("list-builder", (new Date()).getTime());
+          });
+      }
+
+
+
+      if(((new Date()).getTime() - cookie2) / (1000 * 60 * 60 * 24) > cookie_expire) {
+          $("#cookieConsent").delay(delay2).fadeIn("fast", () => {
+          });
+
+
+
+          $("#ok",).click(() => {
+              $("#cookieConsent").hide();
+              localStorage.setItem("cookieConsent", (new Date()).getTime());
+          });
+          $("#closeCookieConsent",).click(() => {
+              $("#cookieConsent").hide();
+              localStorage.setItem("cookieConsent", (new Date()).getTime());
+          });
+
+      }
+
+
+
+
+
+
+
+
+  });
+  $("#closepopup").click(() => {
+      $("#list-builder, #popup-box").hide();
+      localStorage.setItem("list-builder", (new Date()).getTime());
+  });
+  $("#clearbutton").click(() => {
+      $("#list-builder, #popup-box").hide();
+      localStorage.setItem("list-builder", (new Date()).getTime());
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+
+
+$(function() {
+  var INDEX = 0;
+  $("#chat-submit").click(function(e) {
+    e.preventDefault();
+    var msg = $("#chat-input").val();
+    var res = "We will get back to you";
+    var helloq = msg.includes("hi")|| msg.includes("hello")|| msg.includes("Hello") || msg.includes("Hi");
+    var hello ="Hello. How are you?";
+    var n = msg.includes("good")|| msg.includes("fine")|| msg.includes("great")|| msg.includes("ok")|| msg.includes("Good")|| msg.includes("Fine")|| msg.includes("Great")|| msg.includes("Ok")|| msg.includes("OK")|| msg.includes("nice")|| msg.includes("Nice");
+    var m = msg.includes("not")||msg.includes("thanks")||msg.includes("Thanks")||msg.includes("thank")||msg.includes("Thank")||msg.includes("thank you")||msg.includes("Thank you")||msg.includes("thank u")||msg.includes("Thank u");
+    var good ="That's great!";
+    var replyq = msg.includes("how are you")||msg.includes("How are you")||msg.includes("how are you?")||msg.includes("How are you?")||msg.includes("how r u?")||msg.includes("how r u")||msg.includes("How r u?")||msg.includes("How r u");
+    var reply = Array("I'm good, thanks!","I'm great, thanks!","I'm OK, thanks!","I'm fine, thanks!","I'm well, thanks!");
+    var reply = reply[Math.floor(Math.random() * reply.length)];
+    var price1 = (msg.includes("how much")&&msg.includes("30"))||(msg.includes("How much")&&msg.includes("30"));
+    var pricereply1 ="A 30 second animation is $200.";
+    var price2 = (msg.includes("how much")&&msg.includes("60"))||(msg.includes("How much")&&msg.includes("60"));
+    var pricereply2 ="A 60 second animation is $300.";
+    var price3 = (msg.includes("how much")&&msg.includes("90"))||(msg.includes("How much")&&msg.includes("90"));
+    var pricereply3 ="A 90 second animation is $400.";
+    var nameq = msg.includes("your name")|| msg.includes("Your name")||msg.includes("ur name")||msg.includes("Ur name");
+    var name = "My name is Robbie.";
+    var timeq = (msg.includes("how long")||msg.includes("How long")||msg.includes("how much time"))||(msg.includes("How much time"))||(msg.includes("when") && msg.includes("my") && msg.includes("done"));
+    var time = "Your order will be complete in 2-3 weeks";
+    var helpq = (msg.includes("help")||msg.includes("Help"))&&!(msg.includes("with")||msg.includes("With"));
+    var help = "What do you need help with?";
+    var pricingq = msg.includes("price")||msg.includes("pricing")||msg.includes("prices")||msg.includes("Price")||msg.includes("Pricing")||msg.includes("Prices");
+    var pricing = "Here are our prices: 30 second animation: $200, 60 second animation: $300, 90 second animation: $400.";
+    var intro = "Hi my name is Robbie, how can I help?"
+    var endq= msg.includes("thanks")||msg.includes("Thanks")||msg.includes("thank")||msg.includes("Thank")||msg.includes("thank you")||msg.includes("Thank you")||msg.includes("thank u")||msg.includes("Thank u");
+    var end = Array("You're welcome!","My pleasure!","Of course!","No problem!","Glad I could help!");
+    var end = end[Math.floor(Math.random() * end.length)];
+if (price1==true){
+  setTimeout(function() {
+    generate_message(pricereply1, 'user');
+  }, 1000)
+
+}
+if (price2==true){
+  setTimeout(function() {
+    generate_message(pricereply2, 'user');
+  }, 1000)
+}
+if (price3==true){
+  setTimeout(function() {
+    generate_message(pricereply3, 'user');
+  }, 1000)
+}
+
+
+
+if (timeq==true) {
+  setTimeout(function() {
+    generate_message(time, 'user');
+  }, 1000)
+}
+
+
+
+if (n==true && m==false){
+  setTimeout(function() {
+    generate_message(good, 'user');
+  }, 1000)
+}
+    if(msg.trim() == ''){
+      return false;
+    }
+    generate_message(msg, 'self');
+    var buttons = [
+        {
+          name: 'Existing User',
+          value: 'existing'
+        },
+        {
+          name: 'New User',
+          value: 'new'
+        }
+      ];
+      if (helloq==true) {
+        setTimeout(function() {
+          generate_message(hello, 'user');
+        }, 1000)
+      }
+
+      if (replyq==true) {
+        setTimeout(function() {
+          generate_message(reply, 'user');
+        }, 2000)
+      }
+
+
+
+
+
+      if (nameq==true) {
+        setTimeout(function() {
+          generate_message(name, 'user');
+      }, 1000)
+    }
+
+    if (helpq==true) {
+      setTimeout(function() {
+        generate_message(help, 'user');
+    }, 1000)
+    }
+    if (pricingq==true) {
+      setTimeout(function() {
+        generate_message(pricing, 'user');
+    }, 1000)
+    }
+
+if (endq==true){
+  setTimeout(function() {
+    generate_message(end, 'user');
+}, 1000)
+}
+  })
+
+
+  function generate_message(msg, type) {
+    INDEX++;
+    var str="";
+    str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+    str += "          <span class=\"msg-avatar\">";
+    str += "          <\/span>";
+    str += "          <div class=\"cm-msg-text\">";
+    str += msg;
+    str += "          <\/div>";
+    str += "        <\/div>";
+    $(".chat-logs").append(str);
+    $("#cm-msg-"+INDEX).hide().fadeIn(300);
+    if(type == 'self'){
+     $("#chat-input").val('');
+    }
+    $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+  }
+
+  function generate_button_message(msg, buttons){
+    /* Buttons should be object array
+      [
+        {
+          name: 'Existing User',
+          value: 'existing'
+        },
+        {
+          name: 'New User',
+          value: 'new'
+        }
+      ]
+    */
+    INDEX++;
+    var btn_obj = buttons.map(function(button) {
+       return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
+    }).join('');
+    var str="";
+    str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
+    str += "          <span class=\"msg-avatar\">";
+    str += "          <\/span>";
+    str += "          <div class=\"cm-msg-text\">";
+    str += msg;
+    str += "          <\/div>";
+    str += "          <div class=\"cm-msg-button\">";
+    str += "            <ul>";
+    str += btn_obj;
+    str += "            <\/ul>";
+    str += "          <\/div>";
+    str += "        <\/div>";
+    $(".chat-logs").append(str);
+    $("#cm-msg-"+INDEX).hide().fadeIn(300);
+    $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+    $("#chat-input").attr("disabled", true);
+  }
+
+  $(document).delegate(".chat-btn", "click", function() {
+    var value = $(this).attr("chat-value");
+    var name = $(this).html();
+    $("#chat-input").attr("disabled", false);
+    generate_message("name, 'self'");
+  })
+
+  $("#chat-circle").click(function() {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+
+  })
+
+  $(".chat-box-toggle").click(function() {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+
+  })
+})
+
+
+
+  </script>
+</html>
