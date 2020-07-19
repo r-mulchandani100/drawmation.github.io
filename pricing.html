@@ -24,7 +24,7 @@ footer {
   height: 16vw;
   width: 1440px;
   position: relative;
-  top: 250px;
+  top: 220px;
   left: 0px;
   z-index: 1000000000;
 }
@@ -87,28 +87,29 @@ width: 1000000%;
 
 
 </nav>
-<hr style="background-color: black; position: relative; left: -200px;top:-1020px; z-index: 10000; width: 1900px; height:140px; border:none;">
-<h5 class = "header2">Check out our</h5></div>
-<h8 class = "header5">LOW PRICES!</h8></div>
-
-<center><i id="hover-effect" style="color:black; z-index: 10000; position:relative; opacity: 0.5; top: -480px; left: 0px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i></center>
+<button id="purchase" class="purchbtn">Purchase</button>
+<br>
+<br>
+<br>
+<br>
+<center><i id="hover-effect" style="color:black; z-index: 10000; position:relative; opacity: 0.5; top: -360px; left: 0px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i></center>
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
+    <div class="numbertext">30 second animation</div>
     <img src="price1.jpg" alt="1" style="width:100%">
     <div class="text">Caption Text</div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
+    <div class="numbertext">60 second animation</div>
     <img src="price2.jpg" alt="2"style="width:100%">
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
+    <div class="numbertext">90 second animation</div>
     <img src="price3.png" alt="3"style="width:100%">
     <div class="text">Caption Three</div>
   </div>
@@ -125,7 +126,18 @@ width: 1000000%;
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-<div style="width: 300px; "id="paypal-button-container"></div>
+<div id="buy" style="background-color: black; position: relative; top: 30px; height: 745px;">
+<div style="background-color: black;">
+
+<div>
+    <video controls volume="0.1" poster="thumbnail1.png" id='video2' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: 50px; left: 850px;">
+    <source src="ex1.mov"></source>
+    </video>
+    <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 70px; left: 875px;">
+      60 Second Whiteboard Animation
+</div>
+<div style="width: 300px; position:relative; top: 100px; left: 965px; "id="paypal-button-container"></div>
+</div>
 <script src="https://www.paypal.com/sdk/js?client-id=Ae2J0Vl8zYJ61jcUhn8JiltAoWbmPay6BwKnvQ7H3tlHztYzlubuhTitYU1nt3y4SJeHK8dXRswD0m-s&currency=USD" data-sdk-integration-source="button-factory"></script>
 <script>
   paypal.Buttons({
@@ -134,12 +146,13 @@ width: 1000000%;
           color: 'black',
           layout: 'vertical',
           label: 'pay',
+
       },
       createOrder: function(data, actions) {
           return actions.order.create({
               purchase_units: [{
                   amount: {
-                      value: '200'
+                      value: '.01'
                   }
               }]
           });
@@ -151,7 +164,6 @@ width: 1000000%;
       }
   }).render('#paypal-button-container');
 </script>
-
 </body>
 <div class="container">
 <a class="searchbox">
@@ -197,12 +209,14 @@ width: 1000000%;
 document.getElementById("screen").addEventListener("mouseover", windows);
 document.getElementById("screen").addEventListener("mouseleave", windows);
 document.getElementById("hover-effect").addEventListener("click", topFunction2);
+document.getElementById("purchase").addEventListener("click", topFunction3);
+document.getElementById("buy").addEventListener("mouseover", navchange);
+document.getElementById("buy").addEventListener("mouseout", reset);
 
 function windows() {
     var w = window.innerWidth;
     var h = window.innerHeight;
     if (w<1179) {
-      document.getElementById("nav").style.visibility = "hidden";
       document.getElementById("logo1").style.visibility = "visible";
       document.getElementById("animex").style.visibility = "visible";
       document.getElementById("price").style.visibility = "visible";
@@ -229,11 +243,30 @@ function windows() {
   function topFunction2() {
     document.body.scrollTop = 820;
     document.documentElement.scrollTop =820;
+
+  }
+
+  function topFunction3() {
+    document.body.scrollTop = 1680;
+    document.documentElement.scrollTop =1680;
   }
 
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
+
+  function navchange(){
+
+  document.getElementById("nav").className="fixed-nav-bar2";
+
+}
+
+function reset(){
+var y = window.pageYOffset;
+if (y<1600){
+document.getElementById("nav").className="fixed-nav-bar";
+}
+}
 </script>
 
 <script src="hilitor.js"></script>
@@ -274,7 +307,21 @@ function windows() {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
   }
+  document.getElementById("video2").addEventListener("mouseover", play);
+  document.getElementById("video2").addEventListener("mouseout", pause);
+
+  function play(){
+    var mediaElement = document.getElementById('video2');
+    mediaElement.play();
+    var vid = document.getElementById("video2");
+    vid.volume = 0.2;
+  }
+  function pause(){
+    var mediaElement = document.getElementById('video2');
+    mediaElement.pause();
+  }
+
+
 
 </script>
 </html>
-<!-- Slideshow container -->
