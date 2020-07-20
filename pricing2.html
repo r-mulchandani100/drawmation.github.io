@@ -1,0 +1,462 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" href="drawmation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" /><link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="favicon.ico?v1" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+</head>
+<title>Pricing</title>
+<style>
+body {background-color: white;}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #140d4f;
+  color: white;
+  height: 16vw;
+  width: 1440px;
+  position: relative;
+  top: 20px;
+  left: 0px;
+  z-index: 1000000000;
+}
+hr {
+  position: relative;
+  top: -40px;
+  left: -800px;
+  z-index: 1000000;
+width: 1000000%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#4EA699 ;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #140D4F;
+}
+.progress-bar {
+    background: linear-gradient(to right, white var(--scroll), transparent 0);
+    background-repeat: no-repeat;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    z-index: 1;
+}
+</style>
+<body>
+  <script>
+  window.onload = function() {document.body.scrollTop = document.documentElement.scrollTop = 0;};
+  </script>
+  <div id="playground">
+    <button id="screen" type="button" class="screenbutton"></button>
+  <video style = "position: relative; left:0px; top:0px;" width="1500vw" height="1000vw" autoplay muted loop id="pricingscreenvid1">
+    <source  id = "video1" src="moneyvid.mp4">
+  </video>
+
+  <nav id="nav" class="fixed-nav-bar">
+  <a class = "a" href="home.html">
+    <img src="logo.png" id="logo1"alt="Drawmation Logo" style = "position:relative; left:50px; top:0px;" height = "110vw" width = "240vw" >
+
+
+
+    <a href="animationexamples.html"<button class= "myButton2"  id="animex">
+    <span>Animation Examples</span>
+    </button></a>
+    <div>
+
+    <a href="pricing.html"<button class= "myButton1" id="price">
+    <span>Pricing</span>
+    </button></a>
+    <div class="progress-bar"></div>
+
+</nav>
+<div><button id="purchase" class="purchbtn"><span>Purchase</span></button></div>
+<div><a href="animationexamples.html"><button  id="examples" class="exbtn"><span>See Some Examples</span></button></a></div>
+
+<br>
+<br>
+<br>
+<br>
+<i id="hover-effect" style="color:black; z-index: 10000; position:relative; opacity: 0.5; top: -500px; left: 720px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">30 second animation</div>
+    <img src="price1.jpg" alt="1" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">60 second animation</div>
+    <img src="price2.jpg" alt="2"style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">90 second animation</div>
+    <img src="price3.png" alt="3"style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<div id="buy" style="background-color: black; position: relative; top: 30px; height: 1545px;">
+  <div style="background-color: black;">
+
+
+  <!--30 second animation-->
+  <div>
+      <video controls volume="0.1" poster="thumbnail1.png" id='video2' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: 50px; left: 150px;">
+      <source src="ex1.mov"></source>
+      </video>
+      <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 70px; left: 270px;">
+        30 Second Animation
+  </div>
+  <div style="width: 300px; position:relative; top: 100px; left: 265px; "id="paypal-button-container1"></div>
+  </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=Ae2J0Vl8zYJ61jcUhn8JiltAoWbmPay6BwKnvQ7H3tlHztYzlubuhTitYU1nt3y4SJeHK8dXRswD0m-s&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    paypal.Buttons({
+        style: {
+            shape: 'pill',
+            color: 'black',
+            layout: 'vertical',
+            label: 'pay',
+
+        },
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '200'
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            });
+        }
+    }).render('#paypal-button-container1');
+  </script>
+
+
+
+
+
+
+  <!--60 second animation-->
+
+<div>
+    <video controls volume="0.1" poster="thumbnail2.png" id='video3' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: -442px; left: 790px;">
+    <source src="ex2.mov"></source>
+    </video>
+    <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -422px; left: 910px;">
+      60 Second Animation
+</div>
+<div style="width: 300px; position:relative; top: -392px; left: 905px; "id="paypal-button-container2"></div>
+</div>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'black',
+          layout: 'vertical',
+          label: 'pay',
+
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '300'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container2');
+</script>
+
+
+
+<!--90 second animation-->
+<a name="90">
+<div>
+  <video controls volume="0.1" poster="thumbnail3.png" id='video4' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: -270px; left: 150px;">
+  <source src="ex3.mov"></source>
+  </video>
+  <div id="90sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -250px; left: 270px;">
+    90 Second Animation
+</div>
+<div style="width: 300px; position:relative; top: -220px; left: 265px; "id="paypal-button-container3"></div>
+</div>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'black',
+          layout: 'vertical',
+          label: 'pay',
+
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '400'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container3');
+</script>
+</a>
+
+
+</body>
+<div class="container">
+<a class="searchbox">
+
+<input id="keywords" size="24" style="color: white;"type="text" class="searchbox__input" placeholder="Search..." >
+<svg class="searchbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+  <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
+</svg>
+</a>
+</div>
+<footer>
+
+
+
+
+
+<center><div style=" position: relative; top: 150px; white-space:nowrap;"><code>© 2020 Drawmation</code></div></center>
+
+
+
+<hr style="background-color: white; height:.2vw; position: relative; top: 110px; ">
+
+  <i class="fa fa-envelope" aria-hidden="true" style="position: relative; left:0px; top:-80px;"></i>
+
+<code><a href="mailto:rishimulchandani100@gmail.com" target="_blank" style="color: white;text-decoration: none; position: relative; left:0px; top:-80px;">E-mail Us</a></a></code>
+
+<i class="fa fa-lock" aria-hidden="true" style="position: relative; left: 100px; top:-80px;"></i>
+
+<code><a href="privacypolicy.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 100px; top:-80px;">Privacy Policy</a></code>
+
+<i class="fa fa-file" aria-hidden="true" style="position: relative; left: 200px; top:-80px;"></i>
+
+<code><a href="termsandconditions.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 200px; top:-80px;">Terms & Conditions</a></code>
+
+
+
+<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " z-index: 10000000000000; position:relative; left:-690px; top:-40px;" height = "100vw" width = "230vw" >
+
+</footer>
+
+<script>
+
+
+document.getElementById("hover-effect").addEventListener("click", topFunction2);
+document.getElementById("buy").addEventListener("mouseover", navchange);
+document.getElementById("buy").addEventListener("mouseout", navback);
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
+
+  function topFunction2() {
+    document.body.scrollTop = 820;
+    document.documentElement.scrollTop =820;
+  }
+
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
+
+
+  function navchange(){
+
+    document.getElementById("nav").className="fixed-nav-bar2";
+
+  }
+  function navback(){
+
+  document.getElementById("nav").className="fixed-nav-bar";
+
+  }
+
+
+
+
+function reset(){
+var y = window.pageYOffset;
+if (y<1600){
+document.getElementById("nav").className="fixed-nav-bar";
+}
+}
+</script>
+
+<script src="hilitor.js"></script>
+<script>
+window.addEventListener("DOMContentLoaded", function(e) {
+  var myHilitor2 = new Hilitor("playground1");
+  myHilitor2.setMatchType("left");
+  document.getElementById("keywords").addEventListener("keyup", function(e) {
+    myHilitor2.apply(this.value);
+  }, false);
+}, false);
+var element = document.documentElement,
+  body = document.body,
+  scrollTop = 'scrollTop',
+  scrollHeight = 'scrollHeight',
+  progress = document.querySelector('.progress-bar'),
+  scroll;
+
+document.addEventListener('scroll', function() {
+  scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+  progress.style.setProperty('--scroll', scroll + '%');
+});
+</script>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+  document.getElementById("video2").addEventListener("mouseover", play1);
+  document.getElementById("video2").addEventListener("mouseout", pause1);
+
+  function play1(){
+    var mediaElement = document.getElementById('video2');
+    mediaElement.play();
+    var vid = document.getElementById("video2");
+    vid.volume = 0.2;
+  }
+  function pause1(){
+    var mediaElement = document.getElementById('video2');
+    mediaElement.pause();
+  }
+
+  document.getElementById("video3").addEventListener("mouseover", play2);
+  document.getElementById("video3").addEventListener("mouseout", pause2);
+
+  function play2(){
+    var mediaElement = document.getElementById('video3');
+    mediaElement.play();
+    var vid = document.getElementById("video3");
+    vid.volume = 0.2;
+  }
+  function pause2(){
+    var mediaElement = document.getElementById('video3');
+    mediaElement.pause();
+  }
+  document.getElementById("video4").addEventListener("mouseover", play3);
+  document.getElementById("video4").addEventListener("mouseout", pause3);
+
+  function play3(){
+    var mediaElement = document.getElementById('video4');
+    mediaElement.play();
+    var vid = document.getElementById("video4");
+    vid.volume = 0.2;
+  }
+  function pause3(){
+    var mediaElement = document.getElementById('video4');
+    mediaElement.pause();
+  }
+  function change(){
+  if(document.URL.indexOf("pricing2.html#2") >= 0){
+    document.body.scrollTop = 2500;
+    document.documentElement.scrollTop =2500;
+  }
+  }
+  window.onload = change;
+
+
+</script>
+
+</html>
