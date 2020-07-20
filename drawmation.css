@@ -48,13 +48,15 @@ z-index: 1000000000;
 }
 
 .header3{
-  color:purple;
-  font-size:80;
+  color:#140D4F;
+  font-size:5rem;
   position: relative;
-   left: 400px;
-  top:100px;
+  left: 270px;
+  top:140px;
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
   z-index: 1000000000;
+  white-space: nowrap ;
+
 }
 
 .subheader1 {
@@ -306,6 +308,17 @@ z-index: 1000000000;
   width: 100vw;
   height: 120px;
   background-color: gray;
+}
+
+.fixed-nav-bar3 {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999999999;
+  width: 100vw;
+  height: 120px;
+  background-color: black;
 }
 
 .a {
@@ -1151,15 +1164,176 @@ background-color: rgba(0,0,0,0.8);
 	text-decoration:none;
 	text-shadow:0px 1px 0px #fab300;
   outline: none;
+  transition: all 0.5s;
   position: relative;
-  float: left;
+  left: 100px;
   top:-20px;
 }
-.purchbtn:hover {
-	background:linear-gradient(to bottom, #e8d933 5%, #f09738 100%);
-	background-color:#e8d933;
+
+.purchbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
-.purchbtn:active {
-	position:relative;
-	top:1px;
+
+.purchbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.purchbtn:hover span {
+  padding-right: 25px;
+}
+
+.purchbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+.exbtn {
+  background:linear-gradient(to bottom, #2e49f7 5%, #afc4d6 100%);
+	background-color:#2e49f7;
+	border-radius:10px;
+	border:1px solid blue;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #0022ff;
+  outline: none;
+  transition: all 0.5s;
+  position: relative;
+  left: 600px;
+  top:-74px;
+}
+
+.exbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.exbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color: blue;
+}
+
+.exbtn:hover span {
+  padding-right: 25px;
+}
+
+.exbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.viewButton2 {
+	background:linear-gradient(to bottom, #05193d 5%, #0a294f 100%);
+	background-color:#05193d;
+	border-radius:28px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+  outline: none;
+	text-shadow:0px 1px 0px #050f29;
+  position: relative;
+  top: 270px;
+  left: 345px;
+}
+.viewButton2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.viewButton2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color: white;
+}
+
+.viewButton2:hover span {
+  padding-right: 25px;
+}
+
+.viewButton2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+
+
+.viewButton3 {
+	background:linear-gradient(to bottom, #05193d 5%, #0a294f 100%);
+	background-color:#05193d;
+	border-radius:28px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+  outline: none;
+	text-shadow:0px 1px 0px #050f29;
+  position: relative;
+  top: 370px;
+  left: 345px;
+}
+.viewButton3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.viewButton3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color: white;
+}
+
+.viewButton3:hover span {
+  padding-right: 25px;
+}
+
+.viewButton3:hover span:after {
+  opacity: 1;
+  right: 0;
 }
