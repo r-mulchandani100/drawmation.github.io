@@ -10,6 +10,8 @@
   <link rel="icon" href="favicon.ico?v1" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
 </head>
 <title>Animation Examples</title>
 <style>
@@ -19,12 +21,12 @@ footer {
   padding: 20px;
   background-color: #140d4f;
   color: white;
-  height: 10vw;
+  height:200px;
   width: 1440px;
   position: relative;
-  top: -180px;
+  top: 0px;
   left: 0px;
-  z-index: 10000000;
+  z-index: 1000000000;
 }
 hr {
   position: relative;
@@ -55,11 +57,24 @@ width: 1000000%;
 ::-webkit-scrollbar-thumb:hover {
   background: #140D4F;
 }
-
+.progress-bar {
+    background: linear-gradient(to right, white var(--scroll), transparent 0);
+    background-repeat: no-repeat;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    z-index: 1;
+}
 </style>
 <body>
+  <script>
+  window.onload = function() {document.body.scrollTop = document.documentElement.scrollTop = 0;};
 
-  <nav id="nav" class="fixed-nav-bar">
+  </script>
+  <div id="playground">
+  <nav id="nav" class="fixed-nav-bar3">
   <a class = "a" href="home.html">
   <img src="logo.png" id="logo1"alt="Drawmation Logo" style = "position:relative; left:50px; top:0px;" height = "110vw" width = "240vw" >
 
@@ -73,53 +88,139 @@ width: 1000000%;
     <a href="pricing.html"<button class= "myButton1" id="price">
     <span>Pricing</span>
     </button></a>
-
-
-
+    <div class="progress-bar"></div>
 </nav>
-<h6 class = "header3">Some of our</h6></div>
-<h7 class = "header4">examples...</h7></div>
-<a class = "a" href="home.html">
-<img src="logo.png" alt="Drawmation Logo" style = "position:relative; left:-325px; top:-400px;" height = "20%" width = "20%" ></a>
-<img src="ae1.png" alt="Animation example 1" style = "position:relative; left:-450px; top:50px;" height = "35%" width = "28%" >
-<img src="ae2.png" alt="Animation example 2" style = "position:relative; left:700px; top:-253px;" height = "35%" width = "28%" >
-<img src="ae3.png" alt="Animation example 3" style = "position:relative; left:125px; top:85px;" height = "35%" width = "28%" >
-</body>
-<footer
+<div id="examples" style="background-color: #8B4513; height: 1300px;">
+<h6 class="header3">Some of Our Examples</h6>
 
-<div class="container">
-  <a class="searchbox">
-    <input style="color: white;"type="text" class="searchbox__input" placeholder="Search..." />
-    <svg class="searchbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
-      <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
-    </svg>
-  </a>
+
+
+
+<!--60 second animation -->
+<div>
+  <video controls volume="0.2" poster="athumbnail2.png" id='video2' style="outline: none; border: solid 5px  gray; height: 120px; width: 494px; min-width: 430px; min-height: 247px; position:relative; top: 200px; left: 750px;">
+  <source src="aex2.mov"></source>
+  </video>
+  <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 280px; left: 250px;">
+    60 Second Animation
+</div>
+<div><a href="pricing2.html#2"><button id="view2" class="viewButton2"><span>View</span></button></a></div>
 
 </div>
-<center><br><br><br><br><br><br><br><br><br><br><br><br><hr></center>
 
-<center><div style=" position: relative; top: 100px; white-space:nowrap;"><code>© 2020 Drawmation</code></div></center>
 
-</footer>
+
+
+
+
+
+<!--90 second animation-->
+<div>
+  <video controls volume="0.1" poster="athumbnail3.png" id='video3' style="outline: none; border: solid 5px  gray; height: 120px; width: 494px; min-width: 430px; min-height: 247px; position:relative; top: 400px; left: 150px;">
+  <source src="aex3.mov"></source>
+  </video>
+  <div id="90sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 480px; left: 250px;">
+    90 Second Animation
+</div>
+<div><a href="pricing2.html#2"><button id="view3" class="viewButton3"><span>View</span></button></a></div>
+
+</div>
+</div>
+
+
+
+
+
+</body>
+<div class="container">
+<a class="searchbox">
+
+<input id="keywords" size="24" style="color: white;"type="text" class="searchbox__input" placeholder="Search..." ></p>
+<svg class="searchbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+  <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
+</svg>
+</a>
+</div>
+</div>
 <footer>
 
 
 
-  <i class="fa fa-envelope" aria-hidden="true" style="position: relative; left:-200px; top:50px;"></i>
 
-<a href="mailto:rishimulchandani100@gmail.com" style="color: white;text-decoration: none; position: relative; left:-200px; top:50px;">E-mail Us</a></a>
 
-<i class="fa fa-lock" aria-hidden="true" style="position: relative; left: -100px; top:50px;"></i>
-
-<a href="privacypolicy.html" style="color: white;text-decoration: none; position: relative; left: -100px; top:50px;">Privacy Policy</a>
-
-<i class="fa fa-file" aria-hidden="true" style="position: relative; left: 0px; top:50px;"></i>
-
-<a href="termsandconditions.html" style="color: white;text-decoration: none; position: relative; left: 0px; top:50px;">Terms & Conditions</a>
+<center><div style=" position: relative; top: 150px; white-space:nowrap;"><code>© 2020 Drawmation</code></div></center>
 
 
 
+<hr style="background-color: white; height:.2vw; position: relative; top: 110px; ">
+
+  <i class="fa fa-envelope" aria-hidden="true" style="position: relative; left:0px; top:-80px;"></i>
+
+<code><a href="mailto:rishimulchandani100@gmail.com" target="_blank" style="color: white;text-decoration: none; position: relative; left:0px; top:-80px;">E-mail Us</a></a></code>
+
+<i class="fa fa-lock" aria-hidden="true" style="position: relative; left: 100px; top:-80px;"></i>
+
+<code><a href="privacypolicy.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 100px; top:-80px;">Privacy Policy</a></code>
+
+<i class="fa fa-file" aria-hidden="true" style="position: relative; left: 200px; top:-80px;"></i>
+
+<code><a href="termsandconditions.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 200px; top:-80px;">Terms & Conditions</a></code>
+
+
+
+<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " cursor: pointer; z-index: 10000000000000; position:relative; left:-690px; top:-40px;" height = "100vw" width = "230vw" >
 
 </footer>
-<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " z-index: 100000; position:relative; left:0px; top:-400px;" height = "18%" width = "20%" >
+</div>
+<script>
+
+
+  var element = document.documentElement,
+body = document.body,
+scrollTop = 'scrollTop',
+scrollHeight = 'scrollHeight',
+progress = document.querySelector('.progress-bar'),
+scroll;
+
+document.addEventListener('scroll', function() {
+scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+progress.style.setProperty('--scroll', scroll + '%');
+});
+
+window.addEventListener("DOMContentLoaded", function(e) {
+  var myHilitor2 = new Hilitor("playground1");
+  myHilitor2.setMatchType("left");
+  document.getElementById("keywords").addEventListener("keyup", function(e) {
+    myHilitor2.apply(this.value);
+  }, false);
+}, false);
+var element = document.documentElement,
+  body = document.body,
+  scrollTop = 'scrollTop',
+  scrollHeight = 'scrollHeight',
+  progress = document.querySelector('.progress-bar'),
+  scroll;
+
+document.addEventListener('scroll', function() {
+  scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+  progress.style.setProperty('--scroll', scroll + '%');
+});
+
+
+document.getElementById("video1").addEventListener("mouseover", play1);
+document.getElementById("video1").addEventListener("mouseout", pause1);
+
+function play1(){
+  var mediaElement = document.getElementById('video1');
+  mediaElement.play();
+  var vid = document.getElementById("video1");
+  vid.volume = 0.2;
+}
+function pause1(){
+  var mediaElement = document.getElementById('video1');
+  mediaElement.pause();
+}
+</script>
+<script src="hilitor.js"></script>
+
 </html>
