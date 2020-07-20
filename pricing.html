@@ -60,18 +60,27 @@ width: 1000000%;
 ::-webkit-scrollbar-thumb:hover {
   background: #140D4F;
 }
-
+.progress-bar {
+    background: linear-gradient(to right, white var(--scroll), transparent 0);
+    background-repeat: no-repeat;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    z-index: 1;
+}
 </style>
 <body>
   <script>
   window.onload = function() {document.body.scrollTop = document.documentElement.scrollTop = 0;};
-
   </script>
   <div id="playground">
     <button id="screen" type="button" class="screenbutton"></button>
   <video style = "position: relative; left:0px; top:0px;" width="1500vw" height="1000vw" autoplay muted loop id="pricingscreenvid1">
     <source  id = "video1" src="moneyvid.mp4">
   </video>
+
   <nav id="nav" class="fixed-nav-bar">
   <a class = "a" href="home.html">
     <img src="logo.png" id="logo1"alt="Drawmation Logo" style = "position:relative; left:50px; top:0px;" height = "110vw" width = "240vw" >
@@ -86,16 +95,17 @@ width: 1000000%;
     <a href="pricing.html"<button class= "myButton1" id="price">
     <span>Pricing</span>
     </button></a>
-
-
+    <div class="progress-bar"></div>
 
 </nav>
-<button id="purchase" class="purchbtn">Purchase</button>
+<div><button id="purchase" class="purchbtn"><span>Purchase</span></button></div>
+<div><a href="animationexamples.html"><button  id="examples" class="exbtn"><span>See Some Examples</span></button></a></div>
+
 <br>
 <br>
 <br>
 <br>
-<center><i id="hover-effect" style="color:black; z-index: 10000; position:relative; opacity: 0.5; top: -360px; left: 0px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i></center>
+<i id="hover-effect" style="color:black; z-index: 10000; position:relative; opacity: 0.5; top: -500px; left: 720px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
@@ -214,11 +224,10 @@ width: 1000000%;
 
 
 
-
 <!--90 second animation-->
-
+<a name="90">
 <div>
-  <video controls volume="0.1" poster="thumbnail3.png" id='video4' style="outline: none; border: solid 5px  gray; height: 120px; width: 513px; min-width: 430px; min-height: 247px; position:relative; top: -270px; left: 150px;">
+  <video controls volume="0.1" poster="thumbnail3.png" id='video4' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: -270px; left: 150px;">
   <source src="ex3.mov"></source>
   </video>
   <div id="90sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -250px; left: 270px;">
@@ -251,6 +260,7 @@ width: 1000000%;
       }
   }).render('#paypal-button-container3');
 </script>
+</a>
 
 
 </body>
@@ -295,28 +305,11 @@ width: 1000000%;
 
 </div>
 <script>
-document.getElementById("screen").addEventListener("mouseover", windows);
-document.getElementById("screen").addEventListener("mouseleave", windows);
+
+
 document.getElementById("hover-effect").addEventListener("click", topFunction2);
-document.getElementById("purchase").addEventListener("click", topFunction3);
 document.getElementById("buy").addEventListener("mouseover", navchange);
-document.getElementById("buy").addEventListener("mouseout", reset);
-
-function windows() {
-    var w = window.innerWidth;
-    var h = window.innerHeight;
-    if (w<1179) {
-      document.getElementById("logo1").style.visibility = "visible";
-      document.getElementById("animex").style.visibility = "visible";
-      document.getElementById("price").style.visibility = "visible";
-
-
-  }
-    if (w>1179) {
-      document.getElementById("nav").style.visibility = "visible";
-    }
-
-}
+document.getElementById("buy").addEventListener("mouseout", navback);
 
 
   function topFunction() {
@@ -332,21 +325,26 @@ function windows() {
   function topFunction2() {
     document.body.scrollTop = 820;
     document.documentElement.scrollTop =820;
-
-  }
-
-  function topFunction3() {
-    document.body.scrollTop = 1680;
-    document.documentElement.scrollTop =1680;
   }
 
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
 
-  function navchange(){
+
+
+
+
+
+
+function navchange(){
 
   document.getElementById("nav").className="fixed-nav-bar2";
+
+}
+function navback(){
+
+document.getElementById("nav").className="fixed-nav-bar";
 
 }
 
@@ -360,14 +358,26 @@ document.getElementById("nav").className="fixed-nav-bar";
 
 <script src="hilitor.js"></script>
 <script>
-
-  window.addEventListener("DOMContentLoaded", function(e) {
-    var myHilitor2 = new Hilitor("playground1");
-    myHilitor2.setMatchType("left");
-    document.getElementById("keywords").addEventListener("keyup", function(e) {
-      myHilitor2.apply(this.value);
-    }, false);
+window.addEventListener("DOMContentLoaded", function(e) {
+  var myHilitor2 = new Hilitor("playground1");
+  myHilitor2.setMatchType("left");
+  document.getElementById("keywords").addEventListener("keyup", function(e) {
+    myHilitor2.apply(this.value);
   }, false);
+}, false);
+var element = document.documentElement,
+  body = document.body,
+  scrollTop = 'scrollTop',
+  scrollHeight = 'scrollHeight',
+  progress = document.querySelector('.progress-bar'),
+  scroll;
+
+document.addEventListener('scroll', function() {
+  scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+  progress.style.setProperty('--scroll', scroll + '%');
+});
+</script>
+<script>
   var slideIndex = 1;
   showSlides(slideIndex);
 
@@ -437,5 +447,8 @@ document.getElementById("nav").className="fixed-nav-bar";
     mediaElement.pause();
   }
 
+
+
 </script>
+
 </html>
