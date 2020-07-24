@@ -11,6 +11,7 @@
 <link rel="icon" href="favicon.ico?v1" type="image/x-icon" />
 <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon" />
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<script src="https://kit.fontawesome.com/e11e26fa71.js" crossorigin="anonymous"></script>
 
 
 </head>
@@ -26,7 +27,7 @@ footer {
   background-color: #140d4f;
   color: white;
   height:200px;
-  width: 1440px;
+  width: 100%;
   position: relative;
   top: 250px;
   left: 0px;
@@ -84,8 +85,8 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
 <div id="list-builder"></div>
 <div id="popup-box">
 
-    <img src="close.png" style="position: fixed;top:-3px; left:660px;" id="popup-close" />
-    <button style=" cursor: pointer; width:33px;height: 34px; border: none; background:none; outline:none; position: fixed; top:0px; left:663px;" id="clearbutton"></button>
+    <img src="close.png" style="position: fixed;top:-3px; left:94.5%;" id="popup-close" />
+    <button style=" cursor: pointer; width:33px; height: 34px; border: none; background:none; outline:none; position: fixed; top:0px; left:10%;" id="clearbutton"></button>
     <div id="popup-box-content">
         <center><h1>Subscribe to The Drawmation Newsletter</h1></center>
         <br>
@@ -96,13 +97,13 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
             <br>
         </p></center>
         <form name="submit-to-google-sheet">
-        <center><input name="email" type="email" placeholder="Email" required></center>
+        <center><input class="newsletter" name="email" type="email" placeholder="Email" required></center>
         <br>
-        <center><input name="firstName" placeholder="First Name">
-        <input name="lastName" type="text" placeholder="Last Name">
+        <center><input class="newsletter" name="firstName" placeholder="First Name">
+        <input class="newsletter" name="lastName" type="text" placeholder="Last Name">
       </center>
         <br>
-        <center><button id="closepopup" style="margin: 10px;" type="submit">Send</button></center>
+        <center><button id="closepopup" style="cursor: pointer; margin: 10px;" type="submit">Send</button></center>
 
       </form>
 
@@ -226,7 +227,7 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
 <footer>
 
 
-
+<div style="white-space:nowrap;">
 
 
 <center><div style=" position: relative; top: 150px; white-space:nowrap;"><code>© 2020 Drawmation</code></div></center>
@@ -246,11 +247,13 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
 <i class="fa fa-file" aria-hidden="true" style="position: relative; left: 200px; top:-80px;"></i>
 
 <code><a href="termsandconditions.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 200px; top:-80px;">Terms & Conditions</a></code>
+<i class="fas fa-cookie" style="position: relative; left: 300px; top:-80px;"></i>
+
+<code><a href="cookiepolicy.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 300px; top:-80px;">Cookie Policy</a></code>
 
 
-
-<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " cursor: pointer; z-index: 10000000000000; position:relative; left:-690px; top:-40px;" height = "100vw" width = "230vw" >
-
+<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " cursor: pointer; z-index: 10000000000000; position:relative; left:-800px; top:-40px;" height = "100vw" width = "230vw" >
+</div>
 </footer>
 
 </div>
@@ -335,7 +338,7 @@ document.addEventListener('scroll', function() {
 
 
   $(document).ready(function() {
-      var delay =10000; // milliseconds
+      var delay =000; // milliseconds
       var delay2 =5000; // milliseconds
       var cookie_expire = 365; // days
 
@@ -619,7 +622,6 @@ if (endq==true){
 
   })
 })
-
 
 
   </script>
