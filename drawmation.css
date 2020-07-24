@@ -48,10 +48,10 @@ z-index: 1000000000;
 }
 
 .header3{
-  color:#140D4F;
+  color: white;
   font-size:5rem;
   position: relative;
-  left: 270px;
+  left: 260px;
   top:140px;
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
   z-index: 1000000000;
@@ -134,17 +134,16 @@ z-index: 1000000000;
 		color:white;
 		font-family:Arial;
 		font-size:17px;
-		padding:.75vw 3.5vw;
 		text-decoration:overline;
 		background:linear-gradient(to bottom, #3856f0 5%, #140d4f 100%);
 		background-color:#3856f0;
     animation-name: fade;
     animation-duration: 4s;
-	position:relative;
-	top:1px;
-	position: relative;
+max-width: 10%;
+	position: fixed;
  	left: 350px;
-	top: -95px;
+	top: 30px;
+
 }
 
 .myButton1 span {
@@ -183,7 +182,7 @@ z-index: 1000000000;
 	color:white;
 	font-family:Arial;
 	font-size:17px;
-  padding:.75vw 3.5vw;
+  padding:1% 5%;
 	text-decoration: overline;
 	background:linear-gradient(to bottom, #4ea699 5%, #6fedb7 100%);
 	background-color:#6fedb7;
@@ -191,9 +190,10 @@ z-index: 1000000000;
   animation-duration: 4s;
 	position:relative;
 	top:1px;
-	position: relative;
- 	left: 380px;
-	top: -53px;
+	position: fixed;
+ 	left: 620px;
+	top: 30px;
+  white-space:nowrap;
 }
 .myButton2 span {
   cursor: pointer;
@@ -291,22 +291,23 @@ z-index: 1000000000;
   transition: background-color 1s linear;
 
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 0%;
   z-index: 999999999999999;
-  width: 100vw;
-  height: 120px;
+  width: 100%;
+  height: 20%;
   background-color: black;
+  
 }
 .fixed-nav-bar2 {
   transition: background-color 1s linear;
 
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 0%;
   z-index: 999999999999999;
-  width: 100vw;
-  height: 120px;
+  width: 100%;
+  height: 20%;
   background-color: gray;
 }
 
@@ -316,8 +317,8 @@ z-index: 1000000000;
   top: 0;
   left: 0;
   z-index: 999999999999999;
-  width: 100vw;
-  height: 120px;
+  width: 100%;
+  height: 20%;
   background-color: black;
 }
 
@@ -434,8 +435,7 @@ z-index: 1000000000;
 
 
 .container {
-  width: 0vw;
-  height: 0vw;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -446,11 +446,11 @@ z-index: 1000000000;
 }
 .container .searchbox {
   position: fixed;
-  top:30px;
-  left: 998px;
+  top:4%;
+  left: 69.6%;
   display: block;
-  width: 100%;
-  max-width: 53px;
+  width: 4%;
+  min-width: 50px;
   transition: .7s linear;
   overflow: hidden;
   z-index: 100000000000000000000;
@@ -1031,6 +1031,8 @@ position: relative;
 margin: auto;
 background-color: none;
 border: none;
+position: relative;
+top:-200px;
 }
 
 /* Hide the images by default */
@@ -1097,7 +1099,9 @@ margin: 0 2px;
 background-color: #bbb;
 border-radius: 50%;
 display: inline-block;
-transition: background-color 0.6s ease;
+transition: background-color 0.8s ease;
+position: relative;
+top: -200px;
 }
 
 .active, .dot:hover {
@@ -1152,7 +1156,7 @@ background-color: rgba(0,0,0,0.8);
 .purchbtn {
 	background:linear-gradient(to bottom, #f09738 5%, #e8d933 100%);
 	background-color:#f09738;
-	border-radius:10px;
+	border-radius:28px;
 	border:1px solid #eba415;
 	display:inline-block;
 	cursor:pointer;
@@ -1200,8 +1204,8 @@ background-color: rgba(0,0,0,0.8);
 .exbtn {
   background:linear-gradient(to bottom, #2e49f7 5%, #afc4d6 100%);
 	background-color:#2e49f7;
-	border-radius:10px;
-	border:1px solid blue;
+	border-radius:28px;
+	border:1px solid #1daff2;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -1213,7 +1217,7 @@ background-color: rgba(0,0,0,0.8);
   outline: none;
   transition: all 0.5s;
   position: relative;
-  left: 600px;
+  left: 560px;
   top:-74px;
 }
 
@@ -1244,6 +1248,51 @@ background-color: rgba(0,0,0,0.8);
 }
 
 
+.viewButton1 {
+	background:linear-gradient(to bottom, #05193d 5%, #0a294f 100%);
+	background-color:#05193d;
+	border-radius:28px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+  outline: none;
+	text-shadow:0px 1px 0px #050f29;
+  position: relative;
+  top: 240px;
+  left: 345px;
+}
+.viewButton1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.viewButton1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color: white;
+}
+
+.viewButton1:hover span {
+  padding-right: 25px;
+}
+
+.viewButton1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
 .viewButton2 {
 	background:linear-gradient(to bottom, #05193d 5%, #0a294f 100%);
 	background-color:#05193d;
@@ -1259,8 +1308,8 @@ background-color: rgba(0,0,0,0.8);
   outline: none;
 	text-shadow:0px 1px 0px #050f29;
   position: relative;
-  top: 270px;
-  left: 345px;
+  top: -101px;
+  left: 1000px;
 }
 .viewButton2 span {
   cursor: pointer;
@@ -1309,7 +1358,7 @@ background-color: rgba(0,0,0,0.8);
   outline: none;
 	text-shadow:0px 1px 0px #050f29;
   position: relative;
-  top: 370px;
+  top: 40px;
   left: 345px;
 }
 .viewButton3 span {
@@ -1336,4 +1385,142 @@ background-color: rgba(0,0,0,0.8);
 .viewButton3:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+
+
+.contactbtn {
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:28px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+  outline: none;
+  position: relative;
+  left: 1070px;
+  top:-127px;
+}
+.contactbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.contactbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color: white;
+}
+
+.contactbtn:hover span {
+  padding-right: 25px;
+}
+
+.contactbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+input[type=number]:hover::-webkit-inner-spin-button {
+    width: 14px;
+    height: 36px;
+}
+
+input::-webkit-inner-spin-button {
+  margin: 0;
+}
+::placeholder {
+  color: white;
+}
+
+
+
+
+
+
+
+ .payinput:before {
+     color: black;
+ }
+
+
+
+.payinput {
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  height: 40px;
+  position: relative;
+  left: 925px;
+  top: -525px;
+  width: 200px;
+  font-family: "Lucida Console", Courier, monospace;
+
+}
+
+
+.viewButton4 {
+	background:linear-gradient(to bottom, #05193d 5%, #0a294f 100%);
+	background-color:#05193d;
+	border-radius:28px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+  outline: none;
+	text-shadow:0px 1px 0px #050f29;
+  position: relative;
+  top: -299px;
+  left: 1005px;
+}
+.viewButton4 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.viewButton4 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color: white;
+}
+
+.viewButton4:hover span {
+  padding-right: 25px;
+}
+
+.viewButton4:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+.newsletter{
+  background-color: black;
+  color: white;
+
 }
