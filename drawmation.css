@@ -133,17 +133,19 @@ z-index: 1000000000;
 		cursor:pointer;
 		color:white;
 		font-family:Arial;
-		font-size:17px;
-		text-decoration:overline;
 		background:linear-gradient(to bottom, #3856f0 5%, #140d4f 100%);
 		background-color:#3856f0;
     animation-name: fade;
     animation-duration: 4s;
-max-width: 10%;
-	position: fixed;
- 	left: 350px;
-	top: 30px;
-
+    text-align: center;
+    font-size:1rem;
+    padding: 1em;
+    min-width: 13vw;
+    min-height: 5vh;
+    position: fixed;
+    top: 4%;
+    left: 25%;
+    white-space:nowrap;
 }
 
 .myButton1 span {
@@ -181,18 +183,18 @@ max-width: 10%;
 	cursor:pointer;
 	color:white;
 	font-family:Arial;
-	font-size:17px;
-  padding:1% 5%;
-	text-decoration: overline;
 	background:linear-gradient(to bottom, #4ea699 5%, #6fedb7 100%);
 	background-color:#6fedb7;
   animation-name: fade;
   animation-duration: 4s;
-	position:relative;
-	top:1px;
-	position: fixed;
- 	left: 620px;
-	top: 30px;
+  text-align: center;
+  font-size:1rem;
+  padding: 1em;
+  min-width: 13vw;
+  min-height: 5vh;
+  position: fixed;
+  top: 4%;
+  left: 50%;
   white-space:nowrap;
 }
 .myButton2 span {
@@ -297,7 +299,7 @@ max-width: 10%;
   width: 100%;
   height: 20%;
   background-color: black;
-  
+
 }
 .fixed-nav-bar2 {
   transition: background-color 1s linear;
@@ -435,22 +437,21 @@ max-width: 10%;
 
 
 .container {
-
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #140d4f;
   position: relative;
-  top: -40000000px;
   z-index: 100000000000000000000;
 }
 .container .searchbox {
   position: fixed;
-  top:4%;
-  left: 69.6%;
+  top: 2em;
+  left: 70em;
+  margin-left: auto;
   display: block;
-  width: 4%;
-  min-width: 50px;
+  width: 3.6vw;
+  margin-right: -20px;
   transition: .7s linear;
   overflow: hidden;
   z-index: 100000000000000000000;
@@ -639,12 +640,12 @@ max-width: 10%;
 
 @keyframes slide {
   from {position: fixed;
-    top:30px;
-    left: 1440px;
+    top: 2em;
+    left: 120em;
   }
   to {position: fixed;
-  top:30px;
-  left: 998px;}
+  top: 2em;
+  left: 70em;}
 }
 
 
