@@ -437,6 +437,7 @@ z-index: 1000000000;
 
 
 .container {
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -450,14 +451,14 @@ z-index: 1000000000;
   left: 70em;
   margin-left: auto;
   display: block;
-  width: 3.6vw;
+  max-width: 3.6vw;
   margin-right: -20px;
   transition: .7s linear;
   overflow: hidden;
   z-index: 100000000000000000000;
   animation-name: slide;
   animation-duration: 1s;
-
+  cursor: pointer;
 }
 .container .searchbox .searchbox__input {
   display: block;
@@ -470,7 +471,7 @@ z-index: 1000000000;
   padding: 15px;
   color: #24233A;
   font-size: 20px;
-  cursor: pointer;
+  cursor: text;
   transition: 0.4s linear;
 }
 .container .searchbox .searchbox__input::placeholder {
