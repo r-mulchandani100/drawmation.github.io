@@ -6,8 +6,8 @@ html,body
     margin-left: auto;
     padding: 0px;
 		max-width: 1440px;
-
 			}
+
 html
 {
 		overflow-x: hidden;
@@ -1517,4 +1517,10 @@ input::-webkit-inner-spin-button {
   background-color: black;
   color: white;
 
+}
+
+@media only screen and (max-width: 600px) {
+  html,body {
+    overflow-x: hidden;
+  }
 }
