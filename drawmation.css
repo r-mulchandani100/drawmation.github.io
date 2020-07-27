@@ -14,7 +14,6 @@ html,body
 html
 {
 		overflow-x: hidden;
-
     scroll-behavior: smooth;
 			}
 h1 {
@@ -1523,8 +1522,12 @@ input::-webkit-inner-spin-button {
 
 }
 
+
 @media only screen and (max-width: 600px) {
   html,body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+
   }
+
 }
