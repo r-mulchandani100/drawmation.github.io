@@ -1531,3 +1531,87 @@ input::-webkit-inner-spin-button {
   }
 
 }
+@media only screen and (max-height: 700px) {
+
+  .header1 {
+      color:black;
+      font-size:3vw;
+      position: relative;
+      top: -150%;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: underline;
+      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+      z-index: 1000000000;
+  }
+}
+@media only screen and (max-height: 620px) {
+
+  .header1 {
+      color:black;
+      font-size:3vw;
+      position: relative;
+      top: -170%;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: underline;
+      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+      z-index: 1000000000;
+  }
+}
+@media only screen and (max-height: 550px) {
+
+  .header1 {
+      color:black;
+      font-size:3vw;
+      position: relative;
+      top: -195%;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: underline;
+      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+      z-index: 1000000000;
+  }
+}
+@media only screen and (max-height: 510px) {
+
+  .header1 {
+      color:black;
+      font-size:3vw;
+      position: relative;
+      top: -212%;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: underline;
+      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+      z-index: 1000000000;
+  }
+}
+@media only screen and (max-height: 480px) {
+
+  .header1 {
+      color:black;
+      font-size:3vw;
+      position: relative;
+      top: -225%;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: underline;
+      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+      z-index: 1000000000;
+  }
+}
+@media only screen and (max-height: 430px) {
+
+  .header1 {
+      color:black;
+      font-size:3vw;
+      position: relative;
+      top: -235%;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: underline;
+      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+      z-index: 1000000000;
+  }
+}
