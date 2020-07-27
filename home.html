@@ -222,8 +222,9 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
   <textarea1 class = "text1">enter text here</textarea1>
   <textarea2 class = "text2">enter text here</textarea2>
   <textarea3 class = "text3">enter text here</textarea3>
-  <i id="hover-effect" style="color:white; z-index: 10000; position:relative; opacity: 0.5; top: -1500px; left: 303px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
-
+  <div id="arrow1" style="position: relative; top: -193%;">
+  <center><i id="hover-effect" style="color:white; z-index: 10000; font-size: 3vw;opacity: 0.5;" class="fa fa-arrow-down fa-2x" aria-hidden="false"></i></center>
+</div>
 </body>
 
 <footer>
@@ -447,7 +448,7 @@ $(function() {
     var n = msg.includes("good")|| msg.includes("fine")|| msg.includes("great")|| msg.includes("ok")|| msg.includes("Good")|| msg.includes("Fine")|| msg.includes("Great")|| msg.includes("Ok")|| msg.includes("OK")|| msg.includes("nice")|| msg.includes("Nice");
     var m = msg.includes("not")||msg.includes("thanks")||msg.includes("Thanks")||msg.includes("thank")||msg.includes("Thank")||msg.includes("thank you")||msg.includes("Thank you")||msg.includes("thank u")||msg.includes("Thank u");
     var good ="That's great!";
-    var replyq = msg.includes("how are you")||msg.includes("How are you")||msg.includes("how are you?")||msg.includes("How are you?")||msg.includes("how r u?")||msg.includes("how r u")||msg.includes("How r u?")||msg.includes("How r u");
+    var replyq = msg.includes("how are you")||msg.includes("How are you")||msg.includes("how are you?")||msg.includes("How are you?")||msg.includes("how r u?")||msg.includes("how r u")||msg.includes("How r u?")||msg.includes("How r u")||msg.includes("How are u")||msg.includes("How r you")||msg.includes("how are u")||msg.includes("how r you");
     var reply = Array("I'm good, thanks!","I'm great, thanks!","I'm OK, thanks!","I'm fine, thanks!","I'm well, thanks!");
     var reply = reply[Math.floor(Math.random() * reply.length)];
     var price1 = (msg.includes("how much")&&msg.includes("30"))||(msg.includes("How much")&&msg.includes("30"));
@@ -464,30 +465,37 @@ $(function() {
     var help = "What do you need help with?";
     var pricingq = msg.includes("price")||msg.includes("pricing")||msg.includes("prices")||msg.includes("Price")||msg.includes("Pricing")||msg.includes("Prices");
     var pricing = "Here are our prices: 30 second animation: $200, 60 second animation: $300, 90 second animation: $400.";
-    var intro = "Hi my name is Robbie, how can I help?"
     var endq= msg.includes("thanks")||msg.includes("Thanks")||msg.includes("thank")||msg.includes("Thank")||msg.includes("thank you")||msg.includes("Thank you")||msg.includes("thank u")||msg.includes("Thank u");
     var end = Array("You're welcome!","My pleasure!","Of course!","No problem!","Glad I could help!");
     var end = end[Math.floor(Math.random() * end.length)];
+    var auto = "Please e-mail us at rishimulchandani100@gmail.com for help with this question";
+
+
+
+
+
+
+
 if (price1==true){
   setTimeout(function() {
     generate_message(pricereply1, 'user');
   }, 1000)
 
 }
-if (price2==true){
+
+else if (price2==true){
   setTimeout(function() {
     generate_message(pricereply2, 'user');
   }, 1000)
 }
-if (price3==true){
+else if (price3==true){
   setTimeout(function() {
     generate_message(pricereply3, 'user');
   }, 1000)
 }
 
 
-
-if (timeq==true) {
+else if (timeq==true) {
   setTimeout(function() {
     generate_message(time, 'user');
   }, 1000)
@@ -495,32 +503,19 @@ if (timeq==true) {
 
 
 
-if (n==true && m==false){
+else if (n==true && m==false){
   setTimeout(function() {
     generate_message(good, 'user');
   }, 1000)
 }
-    if(msg.trim() == ''){
-      return false;
-    }
-    generate_message(msg, 'self');
-    var buttons = [
-        {
-          name: 'Existing User',
-          value: 'existing'
-        },
-        {
-          name: 'New User',
-          value: 'new'
-        }
-      ];
-      if (helloq==true) {
+
+      else if (helloq==true) {
         setTimeout(function() {
           generate_message(hello, 'user');
         }, 1000)
       }
 
-      if (replyq==true) {
+      else if (replyq==true) {
         setTimeout(function() {
           generate_message(reply, 'user');
         }, 2000)
@@ -530,28 +525,47 @@ if (n==true && m==false){
 
 
 
-      if (nameq==true) {
+      else if (nameq==true) {
         setTimeout(function() {
           generate_message(name, 'user');
       }, 1000)
     }
 
-    if (helpq==true) {
+    else if (helpq==true) {
       setTimeout(function() {
         generate_message(help, 'user');
     }, 1000)
     }
-    if (pricingq==true) {
+    else if (pricingq==true) {
       setTimeout(function() {
         generate_message(pricing, 'user');
     }, 1000)
     }
 
-if (endq==true){
+else if (endq==true){
   setTimeout(function() {
     generate_message(end, 'user');
 }, 1000)
 }
+else{
+  setTimeout(function() {
+    generate_message(auto, 'user');
+}, 1000)
+}
+if(msg.trim() == ''){
+  return false;
+}
+generate_message(msg, 'self');
+var buttons = [
+    {
+      name: 'Existing User',
+      value: 'existing'
+    },
+    {
+      name: 'New User',
+      value: 'new'
+    }
+  ];
   })
 
 
