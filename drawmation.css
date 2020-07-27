@@ -1626,3 +1626,12 @@ input::-webkit-inner-spin-button {
       display: none;
   }
 }
+@media only screen and (min-width: 1445px) {
+
+  #arrow1 {
+      display: none;
+  }
+  .container{
+    display: none;
+  }
+}
