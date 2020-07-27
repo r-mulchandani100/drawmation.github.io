@@ -12,6 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+  <script src="https://kit.fontawesome.com/e11e26fa71.js" crossorigin="anonymous"></script>
 </head>
 <title>Animation Examples</title>
 <style>
@@ -22,7 +23,7 @@ footer {
   background-color: #140d4f;
   color: white;
   height:200px;
-  width: 1440px;
+  width: 100%;
   position: relative;
   top: 0px;
   left: 0px;
@@ -90,21 +91,37 @@ width: 1000000%;
     </button></a>
     <div class="progress-bar"></div>
 </nav>
-<div id="examples" style="background-color: #8B4513; height: 1300px;">
-<h6 class="header3">Some of Our Examples</h6>
+<div id="examples" style="background-color: #10032e; height: 1300px;">
+<h6 class="header3"><code>Some of Our Examples</code></h6>
+
+
+
+
+<!--30 second animation -->
+<div>
+  <video controls volume="0.2" poster="athumbnail1.png" id='video1' style="outline: none; border: solid 5px  gray; height: 120px; width: 494px; min-width: 430px; min-height: 247px; position:relative; top: 200px; left: 150px;">
+  <source src="aex1.mov"></source>
+  </video>
+  <div id="30sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 220px; left: 250px;">
+    <code>30 Second Animation</code>
+</div>
+<div><a href="pricing2.html#1"><button id="view1" class="viewButton1"><span>View</span></button></a></div>
+
+</div>
+
 
 
 
 
 <!--60 second animation -->
 <div>
-  <video controls volume="0.2" poster="athumbnail2.png" id='video2' style="outline: none; border: solid 5px  gray; height: 120px; width: 494px; min-width: 430px; min-height: 247px; position:relative; top: 200px; left: 750px;">
+  <video controls volume="0.2" poster="athumbnail2.png" id='video2' style="outline: none; border: solid 5px  gray; height: 120px; width: 490px; min-width: 430px; min-height: 247px; position:relative; top: -141px; left: 790px;">
   <source src="aex2.mov"></source>
   </video>
-  <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 280px; left: 250px;">
-    60 Second Animation
+  <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -121px; left: 905px;">
+    <code>60 Second Animation</code>
 </div>
-<div><a href="pricing2.html#2"><button id="view2" class="viewButton2"><span>View</span></button></a></div>
+<div><a href="pricing2.html#1"><button id="view2" class="viewButton2"><span>View</span></button></a></div>
 
 </div>
 
@@ -116,13 +133,29 @@ width: 1000000%;
 
 <!--90 second animation-->
 <div>
-  <video controls volume="0.1" poster="athumbnail3.png" id='video3' style="outline: none; border: solid 5px  gray; height: 120px; width: 494px; min-width: 430px; min-height: 247px; position:relative; top: 400px; left: 150px;">
+  <video controls volume="0.1" poster="athumbnail3.png" id='video3' style="outline: none; border: solid 5px  gray; height: 120px; width: 497px; min-width: 430px; min-height: 247px; position:relative; top: 00px; left: 150px;">
   <source src="aex3.mov"></source>
   </video>
-  <div id="90sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 480px; left: 250px;">
-    90 Second Animation
+  <div id="90sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 20px; left: 250px;">
+    <code>90 Second Animation</code>
 </div>
 <div><a href="pricing2.html#2"><button id="view3" class="viewButton3"><span>View</span></button></a></div>
+
+</div>
+
+
+
+
+<!--120 second custom animation-->
+
+<div>
+  <video controls volume="0.1" poster="athumbnail4.png" id='video4' style="outline: none; border: solid 5px  gray; height: 120px; width: 494px; min-width: 430px; min-height: 247px; position:relative; top: -341px; left: 790px;">
+  <source src="aex4.mov"></source>
+  </video>
+  <div id="custom" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -321px; left: 920px;">
+    <code>Custom Animation</code>
+</div>
+<div><a href="pricing2.html#2"><button id="view4" class="viewButton4"><span>View</span></button></a></div>
 
 </div>
 </div>
@@ -145,7 +178,7 @@ width: 1000000%;
 <footer>
 
 
-
+<div style="white-space:nowrap;">
 
 
 <center><div style=" position: relative; top: 150px; white-space:nowrap;"><code>© 2020 Drawmation</code></div></center>
@@ -165,11 +198,13 @@ width: 1000000%;
 <i class="fa fa-file" aria-hidden="true" style="position: relative; left: 200px; top:-80px;"></i>
 
 <code><a href="termsandconditions.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 200px; top:-80px;">Terms & Conditions</a></code>
+<i class="fas fa-cookie" style="position: relative; left: 300px; top:-80px;"></i>
+
+<code><a href="cookiepolicy.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 300px; top:-80px;">Cookie Policy</a></code>
 
 
-
-<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " cursor: pointer; z-index: 10000000000000; position:relative; left:-690px; top:-40px;" height = "100vw" width = "230vw" >
-
+<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " cursor: pointer; z-index: 10000000000000; position:relative; left:-800px; top:-40px;" height = "100vw" width = "230vw" >
+</div>
 </footer>
 </div>
 <script>
@@ -206,9 +241,15 @@ document.addEventListener('scroll', function() {
   progress.style.setProperty('--scroll', scroll + '%');
 });
 
-
 document.getElementById("video1").addEventListener("mouseover", play1);
 document.getElementById("video1").addEventListener("mouseout", pause1);
+document.getElementById("video2").addEventListener("mouseover", play2);
+document.getElementById("video2").addEventListener("mouseout", pause2);
+document.getElementById("video3").addEventListener("mouseover", play3);
+document.getElementById("video3").addEventListener("mouseout", pause3);
+document.getElementById("video4").addEventListener("mouseover", play4);
+document.getElementById("video4").addEventListener("mouseout", pause4);
+
 
 function play1(){
   var mediaElement = document.getElementById('video1');
@@ -220,6 +261,37 @@ function pause1(){
   var mediaElement = document.getElementById('video1');
   mediaElement.pause();
 }
+function play2(){
+  var mediaElement = document.getElementById('video2');
+  mediaElement.play();
+  var vid = document.getElementById("video2");
+  vid.volume = 0.2;
+}
+function pause2(){
+  var mediaElement = document.getElementById('video2');
+  mediaElement.pause();
+}
+function play3(){
+  var mediaElement = document.getElementById('video3');
+  mediaElement.play();
+  var vid = document.getElementById("video3");
+  vid.volume = 0.2;
+}
+function pause3(){
+  var mediaElement = document.getElementById('video3');
+  mediaElement.pause();
+}
+function play4(){
+  var mediaElement = document.getElementById('video4');
+  mediaElement.play();
+  var vid = document.getElementById("video4");
+  vid.volume = 0.2;
+}
+function pause4(){
+  var mediaElement = document.getElementById('video4');
+  mediaElement.pause();
+}
+
 </script>
 <script src="hilitor.js"></script>
 
