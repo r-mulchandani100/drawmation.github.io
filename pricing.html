@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -15,6 +12,8 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+  <script src="https://kit.fontawesome.com/e11e26fa71.js" crossorigin="anonymous"></script>
+
 </head>
 <title>Pricing</title>
 <style>
@@ -24,8 +23,8 @@ footer {
   padding: 20px;
   background-color: #140d4f;
   color: white;
-  height: 16vw;
-  width: 1440px;
+  height:200px;
+  width: 100%;
   position: relative;
   top: 20px;
   left: 0px;
@@ -101,17 +100,36 @@ width: 1000000%;
 <div><button id="purchase" class="purchbtn"><span>Purchase</span></button></div>
 <div><a href="animationexamples.html"><button  id="examples" class="exbtn"><span>See Some Examples</span></button></a></div>
 
+
+    <a
+      href="javascript:void(
+        window.open(
+          'https://form.jotform.com/202016328256145',
+          'blank',
+          'scrollbars=yes,
+          toolbar=no,
+          width=700,
+          height=500'
+        )
+      )
+    ">
+    <button id="contact" class="contactbtn">
+      <span>Drawmation Request Form</span></button>
+    </a>
+
+
+
 <br>
 <br>
 <br>
 <br>
-<i id="hover-effect" style="color:black; z-index: 10000; position:relative; opacity: 0.5; top: -500px; left: 720px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
+<i id="hover-effect" style="color:black; z-index: 10000; position:relative; opacity: 0.5; top: -550px; left: 720px;"class="fa fa-arrow-down fa-2x" aria-hidden="false"></i>
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">30 second animation</div>
-    <img src="price1.jpg" alt="1" style="width:100%">
+    <img src="price1.jpg" alt="1" style="width:90vw; height:42vw">
     <div class="text">Caption Text</div>
   </div>
 
@@ -139,7 +157,7 @@ width: 1000000%;
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-<div id="buy" style="background-color: black; position: relative; top: 30px; height: 1545px;">
+<div id="buy" style="background-color: black; position: relative; top: 30px; height: 1045px;">
   <div style="background-color: black;">
 
 
@@ -149,7 +167,7 @@ width: 1000000%;
       <source src="ex1.mov"></source>
       </video>
       <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: 70px; left: 270px;">
-        30 Second Animation
+        <code>30 Second Animation</code>
   </div>
   <div style="width: 300px; position:relative; top: 100px; left: 265px; "id="paypal-button-container1"></div>
   </div>
@@ -192,7 +210,7 @@ width: 1000000%;
     <source src="ex2.mov"></source>
     </video>
     <div id="60sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -422px; left: 910px;">
-      60 Second Animation
+      <code>60 Second Animation</code>
 </div>
 <div style="width: 300px; position:relative; top: -392px; left: 905px; "id="paypal-button-container2"></div>
 </div>
@@ -225,15 +243,14 @@ width: 1000000%;
 
 
 <!--90 second animation-->
-<a name="90">
 <div>
-  <video controls volume="0.1" poster="thumbnail3.png" id='video4' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: -270px; left: 150px;">
+  <video controls volume="0.1" poster="thumbnail3.png" id='video4' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: -70px; left: 150px;">
   <source src="ex3.mov"></source>
   </video>
-  <div id="90sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -250px; left: 270px;">
-    90 Second Animation
+  <div id="90sec" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -50px; left: 270px;">
+    <code>90 Second Animation</code>
 </div>
-<div style="width: 300px; position:relative; top: -220px; left: 265px; "id="paypal-button-container3"></div>
+<div style="width: 300px; position:relative; top: -20px; left: 265px; "id="paypal-button-container3"></div>
 </div>
 <script>
   paypal.Buttons({
@@ -260,14 +277,33 @@ width: 1000000%;
       }
   }).render('#paypal-button-container3');
 </script>
-</a>
+
+<div>
+  <video controls volume="0.1" poster="thumbnail4.png" id='video5' style="outline: none; border: solid 5px  gray; height: 120px; width: 500px; min-width: 430px; min-height: 247px; position:relative; top: -565px; left: 750px;">
+  <source src="ex4.mov"></source>
+  </video>
+
+<div id="custom" style="color:white; font-size: 2rem; font-weight: 800; position: relative; top: -545px; left: 890px;">
+  <code>Custom Animation</code>
+</div>
+</div>
+
+<form name="_xclick" target="_blank" action="https://www.paypal.com/us/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick" />
+<input type="hidden" name="business" value="rishimulchandani100@gmail.com" />
+<input type="hidden" name="currency_code" value="USD" />
+<input type="hidden" name="item_name" value="Custom Animation" />
+<input class="payinput" type="number" step=".01" name="amount" min="0" value="" placeholder="Enter Amount Here ($)" />
+<input type="image" src="paybutton.png" style="position: relative; top: -435px; left: 662px; width: 300px; height: 47px;" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" />
+</form>
+
 
 
 </body>
 <div class="container">
 <a class="searchbox">
 
-<input id="keywords" size="24" style="color: white;"type="text" class="searchbox__input" placeholder="Search..." ></p>
+<input id="keywords" size="24" style="color: white;"type="text" class="searchbox__input" placeholder="Search..." >
 <svg class="searchbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
   <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
 </svg>
@@ -276,7 +312,7 @@ width: 1000000%;
 <footer>
 
 
-
+<div style="white-space:nowrap;">
 
 
 <center><div style=" position: relative; top: 150px; white-space:nowrap;"><code>© 2020 Drawmation</code></div></center>
@@ -296,20 +332,23 @@ width: 1000000%;
 <i class="fa fa-file" aria-hidden="true" style="position: relative; left: 200px; top:-80px;"></i>
 
 <code><a href="termsandconditions.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 200px; top:-80px;">Terms & Conditions</a></code>
+<i class="fas fa-cookie" style="position: relative; left: 300px; top:-80px;"></i>
+
+<code><a href="cookiepolicy.html" target="_blank" style="color: white;text-decoration: none; position: relative; left: 300px; top:-80px;">Cookie Policy</a></code>
 
 
-
-<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " z-index: 10000000000000; position:relative; left:-690px; top:-40px;" height = "100vw" width = "230vw" >
-
+<img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " cursor: pointer; z-index: 10000000000000; position:relative; left:-800px; top:-40px;" height = "100vw" width = "230vw" >
+</div>
 </footer>
 
-</div>
 <script>
 
 
 document.getElementById("hover-effect").addEventListener("click", topFunction2);
 document.getElementById("buy").addEventListener("mouseover", navchange);
 document.getElementById("buy").addEventListener("mouseout", navback);
+
+document.getElementById("purchase").addEventListener("click", topFunction3);
 
 
   function topFunction() {
@@ -325,6 +364,11 @@ document.getElementById("buy").addEventListener("mouseout", navback);
   function topFunction2() {
     document.body.scrollTop = 820;
     document.documentElement.scrollTop =820;
+  }
+
+  function topFunction3() {
+    document.body.scrollTop = 1920;
+    document.documentElement.scrollTop =1920;
   }
 
   window.onbeforeunload = function () {
@@ -446,6 +490,22 @@ document.addEventListener('scroll', function() {
     var mediaElement = document.getElementById('video4');
     mediaElement.pause();
   }
+
+
+  document.getElementById("video5").addEventListener("mouseover", play4);
+  document.getElementById("video5").addEventListener("mouseout", pause4);
+
+  function play4(){
+    var mediaElement = document.getElementById('video5');
+    mediaElement.play();
+    var vid = document.getElementById("video5");
+    vid.volume = 0.2;
+  }
+  function pause4(){
+    var mediaElement = document.getElementById('video5');
+    mediaElement.pause();
+  }
+
 
 
 
