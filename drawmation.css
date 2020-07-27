@@ -2,13 +2,15 @@ html,body
 {
     width: 100%;
     height: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0;
+    margin-left: 0;
     padding: 0px;
-		max-width: 1440px;
+    max-width: 100%;
     -webkit-box-sizing: border-box;
            -moz-box-sizing: border-box;
                 box-sizing: border-box;
+                background-color: lightblue;
+
 			}
 
 html
@@ -65,61 +67,7 @@ z-index: 1000000000;
 
 }
 
-.subheader1 {
-  color:black;
-  font-size:35;
-  position: relative;
-  top: -125%;
-  padding: 1em;
-  text-align: left;
-  font-weight: bold;
-  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-  z-index: 1000000000;
-}
 
-.subheader2{
-  color:black;
-  font-size:35;
-  position: relative;
-  top: -135%;
-  padding: 1em;
-  text-align: center;
-  font-weight: bold;
-  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-  z-index: 1000000000;
-}
-
-.subheader3{
-  color:black;
-  font-size:35;
-
-  font-weight: bold;
-  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-  z-index: 1000000000;
-}
-
-.text1{
-  color: black;
-  font-size:27;
-
-  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-  z-index: 1000000000;
-}
-
-.text2{
-  color: black;
-  font-size: 27;
-
-  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-  z-index: 1000000000;
-}
-
-.text3{
-  color: black;
-  font-size: 27;
-
-  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-  z-index: 1000000000;}
 
 
 
@@ -325,9 +273,6 @@ z-index: 1000000000;
 }
 
 
-.img {
-  opacity: 0.5;
-}
 
 
 .css-button {
@@ -1027,7 +972,7 @@ to {opacity:1 ;}
 
 /* Slideshow container */
 .slideshow-container {
-max-width: 1440px;
+max-width: 100%;
 position: relative;
 margin: auto;
 background-color: none;
@@ -1535,173 +1480,11 @@ input::-webkit-inner-spin-button {
   }
 
 }
-@media only screen and (max-height: 700px) {
 
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -140%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-@media only screen and (max-height: 620px) {
 
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -160%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-@media only screen and (max-height: 550px) {
 
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -185%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-@media only screen and (max-height: 510px) {
-
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -202%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-@media only screen and (max-height: 480px) {
-
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -215%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-@media only screen and (max-height: 430px) {
-
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -225%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-
-@media only screen and (max-height: 420px) {
-
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -240%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-@media only screen and (max-height: 380px) {
-
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -265%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-@media only screen and (max-height: 350px) {
-
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -285%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-@media only screen and (max-height: 330px) {
-
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -305%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-@media only screen and (max-height: 310px) {
-
-  .header1 {
-      color:black;
-      font-size:3vw;
-      position: relative;
-      top: -315%;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: underline;
-      font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
-      z-index: 1000000000;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-
-  #arrow1 {
-      display: none;
-  }
-}
 @media only screen and (min-width: 1445px) {
 
-  #arrow1 {
-      display: none;
-  }
   .container{
     display: none;
   }
