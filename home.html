@@ -23,18 +23,7 @@ body {
   background-color: white;
   padding: 0; margin: 0;
 }
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #140d4f;
-  color: white;
-  height: 12vw;
-  min-height: 10vw;
-  width: 100vw;
-  position: relative;
-  top:15%;
-  z-index: 1000000000;
-}
+
 
 hr {
   position: relative;
@@ -89,7 +78,7 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
 <div id="popup-box">
 
     <img src="close.png" style="position: fixed; top: -1%; left:94.5%;" id="popup-close" />
-    <button style=" cursor: pointer; width:5%; height: 10%; border: none; background:green; outline:none; position: fixed; top:0%; left:95.1%;" id="clearbutton"></button>
+    <button style=" cursor: pointer; width:5%; height: 10%; border: none; background:none; outline:none; position: fixed; top:0%; left:95.1%;" id="clearbutton"></button>
     <div id="popup-box-content">
         <center><h1>Subscribe to The Drawmation Newsletter</h1></center>
         <br>
@@ -175,7 +164,7 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
 
     <!-- This is the bar which shows scroll percentage -->
     <div class="progress-bar"></div>
-    <div id="chat-circle" class="btn btn-raised">
+    <div id="chat-circle" class="btn1 btn1-raised">
             <div id="chat-overlay"></div>
             <i style="float: left; position: relative; left: -15px; top: -15px;" class="fa fa-commenting fa-2x" aria-hidden="true"></i>
     	</div>
@@ -216,17 +205,21 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
     <center><img style="width:80vw; height: 40vw; padding: 1vw;"src="info1.png" alt="info1"></center>
   <center><img style="width:80vw; height: 40vw; padding: 1vw;" src="info2.png" alt="info2"></center>
   <center><img style="width:80vw; height: 40vw; padding: 1vw;" src="info3.png" alt="info3"></center>
-  <center><h1 style="font-size:3vw; color: #140D4F; text-decoration: underline;"> A Short Example</h1></center>
-  <video class = "img" style = "position: relative; left:0%;  width: 100vw; height: 50vw" autoplay muted loop id="homescreenvid2">
+  <center><h1 style="font-size:3vw; color: #140D4F; text-decoration: underline; font-weight: bold;"> A Short Example</h1></center>
+  <video class = "img" style = "position: relative; left:0%;width: 100vw; height: 50vw;" autoplay muted loop playsinline id="homescreenvid2">
     <source id = "video2" src="graphs.mp4">
   </video>
-  
+  <div class="buttons" style="position: relative; top:10%;">
+    <a href="animationexamples.html"><button style="position: relative; left: -10%;" class="btn-hover color-1">Check Out Some Examples</button></a>
+    <a href="pricing.html"><button style="position: relative; left: 10%;"class="btn-hover color-10">See Our Low Prices</button></a>
+</div>
+
 </body>
 
 <footer>
 
 
-<hr style="background-color: white; height:.2vw; position: relative; top: 45%;">
+<hr id="bar">
 <div>
 <div style="position: relative; top: 0%;left: 12%;">
 
@@ -236,9 +229,11 @@ window.onload = function() {document.body.scrollTop = document.documentElement.s
 <code><a href="privacypolicy.html" target="_blank" style="font-size: .8vw; color: white;text-decoration: none; position: relative; left: 0%; top:500%;">Privacy Policy</a></code>
 <i class="fa fa-file" aria-hidden="true" style="font-size: 1vw; position: relative; left:0%; top:-90%;margin-left: 10vw;"></i>
 <code><a href="termsandconditions.html" target="_blank" style="font-size: .8vw; color: white;text-decoration: none; position: relative; left:0%; top:500%;margin-right: 10vw;">Terms & Conditions</a></code>
-<i class="fas fa-cookie" style="font-size: .8vw; position: relative; left:0%; top:-90%;margin-left: 0vw;"></i>
-<code><a href="cookiepolicy.html" target="_blank" style="font-size: .8vw; color: white;text-decoration: none; position: relative; left:0%; top:500%;margin-right: 10vw;">Cookie Policy</a></code>
-<div style="margin-top: 6vw; margin-right: 22vw; font-size: .8vw; white-space:nowrap;"><code>© 2020 Drawmation</code></div>
+<span style="white-space: nowrap;">
+<i class="fas fa-cookie" style="font-size: .8vw; position: relative; left:0%; top:-90%;margin-left: 0vw; white-space: nowrap;"></i>
+<code><a id="cookiepolicy" href="cookiepolicy.html" target="_blank" style="font-size: .8vw; color: white;text-decoration: none; position: relative; left:0%; top:500%;margin-right: 10vw; white-space:nowrap; ">Cookie Policy</a></code>
+</span>
+<div style="margin-top: 10vw; margin-right: 22vw; font-size: .8vw; white-space:nowrap;"><code>© 2020 Drawmation</code></div>
 </div>
 <span style="position: absolute; left: 3%; top: -3%">
 <img src="logo.png" alt="Drawmation Logo" onclick="topFunction()" style = " cursor: pointer; z-index: 10000000000000; height: 7vw; width: 15vw;">
@@ -327,7 +322,7 @@ document.addEventListener('scroll', function() {
 
 
   $(document).ready(function() {
-      var delay =000; // milliseconds
+      var delay =10000; // milliseconds
       var delay2 =5000; // milliseconds
       var cookie_expire = 365; // days
 
@@ -583,8 +578,8 @@ var buttons = [
       ]
     */
     INDEX++;
-    var btn_obj = buttons.map(function(button) {
-       return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
+    var btn1_obj = buttons.map(function(button) {
+       return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn1 btn1-primary chat-btn1\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
     }).join('');
     var str="";
     str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
@@ -595,7 +590,7 @@ var buttons = [
     str += "          <\/div>";
     str += "          <div class=\"cm-msg-button\">";
     str += "            <ul>";
-    str += btn_obj;
+    str += btn1obj;
     str += "            <\/ul>";
     str += "          <\/div>";
     str += "        <\/div>";
@@ -605,7 +600,7 @@ var buttons = [
     $("#chat-input").attr("disabled", true);
   }
 
-  $(document).delegate(".chat-btn", "click", function() {
+  $(document).delegate(".chat-btn1", "click", function() {
     var value = $(this).attr("chat-value");
     var name = $(this).html();
     $("#chat-input").attr("disabled", false);
