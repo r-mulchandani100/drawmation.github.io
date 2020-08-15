@@ -1015,8 +1015,7 @@ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monosp
 /* The dots/bullets/indicators */
 .dot {
 cursor: pointer;
-height: 1vw;
-width: 1vw;
+padding: 10px;
 background-color: #bbb;
 border-radius: 50%;
 display: inline-block;
@@ -1024,7 +1023,6 @@ transition: background-color 0.8s ease;
 position: relative;
 top: 0%;
 }
-
 .active, .dot:hover {
 background-color: #717171;
 }
@@ -1255,7 +1253,7 @@ background-color: rgba(0,0,0,0.8);
     left: 330px;
     font-size:22px;
     height: 45px;
-    width: 125px;
+    width: 145px;
   }
   .exbtn{
     position: relative;
@@ -1268,10 +1266,10 @@ background-color: rgba(0,0,0,0.8);
   .contactbtn{
     position: relative;
     top: 160px;
-    left: -60px;
+    left: -72px;
     font-size: 22px;
     height: 45px;
-    width: 140px;
+    width: 160px;
   }
   #price1{
     position: relative;
@@ -1329,7 +1327,7 @@ background-color: rgba(0,0,0,0.8);
     left: 200px;
     font-size:22px;
     height: 45px;
-    width: 125px;
+    width: 145px;
   }
   .exbtn{
     position: relative;
@@ -1342,10 +1340,41 @@ background-color: rgba(0,0,0,0.8);
   .contactbtn{
     position: relative;
     top: 160px;
-    left: -180px;
+    left: -200px;
     font-size: 22px;
     height: 45px;
-    width: 140px;
+    width: 160px;
+  }
+  .next {
+    position: relative;
+    top: -15vw;
+    left: 85vw;
+  }
+}
+
+@media only screen and (max-width: 566px) {
+  .purchbtn{
+    position: relative;
+    left: 230px;
+    font-size:22px;
+    height: 45px;
+    width: 145px;
+  }
+  .exbtn{
+    position: relative;
+    top: 80px;
+    left: 50px;
+    font-size:22px;
+    height: 45px;
+    width: 250px;
+  }
+  .contactbtn{
+    position: relative;
+    top: 120px;
+    left: 230px;
+    font-size: 22px;
+    height: 45px;
+    width: 160px;
   }
   .next {
     position: relative;
@@ -1360,7 +1389,7 @@ background-color: rgba(0,0,0,0.8);
     left: 230px;
     font-size:22px;
     height: 45px;
-    width: 125px;
+    width: 145px;
   }
   .exbtn{
     position: relative;
@@ -1372,11 +1401,11 @@ background-color: rgba(0,0,0,0.8);
   }
   .contactbtn{
     position: relative;
-    top: 160px;
-    left: -150px;
+    top: 120px;
+    left: 230px;
     font-size: 22px;
     height: 45px;
-    width: 140px;
+    width: 160px;
   }
   .next {
     position: relative;
@@ -1385,39 +1414,14 @@ background-color: rgba(0,0,0,0.8);
   }
 }
 
-@media only screen and (max-width: 526px) {
-  .purchbtn{
-    position: relative;
-    left: 230px;
-    font-size:22px;
-    height: 45px;
-    width: 125px;
-  }
-  .exbtn{
-    position: relative;
-    top: 80px;
-    left: 50px;
-    font-size:22px;
-    height: 45px;
-    width: 250px;
-  }
-  .contactbtn{
-    position: relative;
-    top: 115px;
-    left: 220px;
-    font-size: 22px;
-    height: 45px;
-    width: 140px;
-  }
-}
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 500px) {
   .purchbtn{
     position: relative;
     left: 160px;
     font-size:22px;
     height: 45px;
-    width: 125px;
+    width: 145px;
   }
   .exbtn{
     position: relative;
@@ -1429,11 +1433,11 @@ background-color: rgba(0,0,0,0.8);
   }
   .contactbtn{
     position: relative;
-    top: 115px;
-    left: 150px;
+    top: 120px;
+    left: 160px;
     font-size: 22px;
     height: 45px;
-    width: 140px;
+    width: 160px;
   }
   .next {
     position: relative;
@@ -1442,13 +1446,40 @@ background-color: rgba(0,0,0,0.8);
   }
 }
 
+@media only screen and (max-width: 402px) {
+  .purchbtn{
+    position: relative;
+    left: 160px;
+    font-size:22px;
+    height: 45px;
+    width: 145px;
+  }
+  .exbtn{
+    position: relative;
+    top: 40px;
+    left: 120px;
+    font-size:22px;
+    height: 45px;
+    width: 250px;
+  }
+  .contactbtn{
+    position: relative;
+    top: 80px;
+    left: 160px;
+    font-size: 22px;
+    height: 45px;
+    width: 160px;
+  }
+}
+
+
   @media only screen and (max-width: 380px) {
     .purchbtn{
       position: relative;
       left: 100px;
       font-size:22px;
       height: 45px;
-      width: 125px;
+      width: 145px;
     }
     .exbtn{
       position: relative;
@@ -1464,7 +1495,7 @@ background-color: rgba(0,0,0,0.8);
       left: 100px;
       font-size: 22px;
       height: 45px;
-      width: 140px;
+      width: 160px;
     }
   }
 
@@ -4578,12 +4609,75 @@ border-radius: 1vw;
   font-family: "Lucida Console", Courier, monospace;
 }
 
-
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 1270px) {
   #buy{
     position: relative;
     top: 10vw;
-    height: 60vw;
+    height: 50vw;
+    width: 100vw;
+  }
+
+  #custom{
+    position: relative;
+    top: 0%;
+    left: 42vw;
+    font-size: 40px;
+  }
+
+  .payinput {
+    position: relative;
+    top: 5vw;
+    font-size: 15px;
+  }
+
+  .blob-btn {
+    position: absolute;
+    left: 45vw;
+    top: 15vw;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  }
+
+@media only screen and (max-width: 1150px) {
+  #buy{
+    position: relative;
+    top: 10vw;
+    height: 50vw;
+    width: 100vw;
+  }
+
+  #custom{
+    position: relative;
+    top: 0%;
+    left: 41vw;
+    font-size: 40px;
+  }
+
+  .payinput {
+    position: relative;
+    top: 5vw;
+    font-size: 15px;
+  }
+
+  .blob-btn {
+    position: absolute;
+    left: 44vw;
+    top: 15vw;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  }
+
+@media only screen and (max-width: 1030px) {
+  #buy{
+    position: relative;
+    top: 10vw;
+    height: 50vw;
     width: 100vw;
   }
 
@@ -4596,169 +4690,278 @@ border-radius: 1vw;
 
   .payinput {
     position: relative;
-    top: -10vw;
+    top: 5vw;
+    font-size: 15px;
+  }
+
+  .blob-btn {
+    position: absolute;
+    left: 44vw;
+    top: 15vw;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  }
+
+@media only screen and (max-width: 960px) {
+  #buy{
+    position: relative;
+    top: 10vw;
+    height: 50vw;
+    width: 100vw;
+  }
+
+  #custom{
+    position: relative;
+    top: 0%;
+    left: 39vw;
+    font-size: 40px;
+  }
+
+  .payinput {
+    position: relative;
+    top: 5vw;
     font-size: 15px;
   }
 
   .blob-btn {
     position: absolute;
     left: 43vw;
-    top: 23vw;
+    top: 17vw;
     width: 120px;
     height: 40px;
     font-size: 20px;
   }
-  footer{
+
+  }
+
+@media only screen and (max-width: 860px) {
+  #buy{
     position: relative;
-    top: -30vw;
-   }
+    top: 10vw;
+    height: 60vw;
+    width: 100vw;
   }
 
-  @media only screen and (max-width: 930px) {
-    .welcomescreen{
-      height: 2000px;
-
-    }
-    footer.footer-distributed{
-      position: relative;
-      top: 19%;
-    }
+  #custom{
+    position: relative;
+    top: 0%;
+    left: 38vw;
+    font-size: 40px;
   }
-  @media only screen and (max-width: 750px) {
-    #buy{
-      position: relative;
-      top: 10vw;
-      height: 100vw;
-      width: 100vw;
-    }
 
-    #custom{
-      position: relative;
-      top: 0%;
-      left: 40vw;
-      font-size: 40px;
-    }
+  .payinput {
+    position: relative;
+    top: 5vw;
+    font-size: 15px;
+  }
 
-    .payinput {
-      position: relative;
-      left: 3vw;
-      top: -10vw;
-      font-size: 15px;
-    }
+  .blob-btn {
+    position: absolute;
+    left: 42vw;
+    top: 18vw;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
 
-    .blob-btn {
-      position: absolute;
-      left: 45vw;
-      top: 25vw;
-      font-size: 20px;
-    }
-    footer{
-      position: relative;
-      top: -30vw;
-     }
-    }
+  }
 
-    @media only screen and (max-width: 565px) {
-      #buy{
-        position: relative;
-        top: 10vw;
-        height: 100vw;
-        width: 100vw;
-      }
+@media only screen and (max-width: 750px) {
+  #buy{
+    position: relative;
+    top: 10vw;
+    height: 60vw;
+    width: 100vw;
+  }
 
-      #custom{
-        position: relative;
-        top: 0%;
-        left: 30vw;
-        font-size: 40px;
-      }
+  #custom{
+    position: relative;
+    top: 0%;
+    left: 38vw;
+    font-size: 35px;
+  }
 
-      .payinput {
-        position: relative;
-        left: -2vw;
-        top: -10vw;
-        font-size: 15px;
-      }
+  .payinput {
+    position: relative;
+    top: 5vw;
+    font-size: 15px;
+  }
 
-      .blob-btn {
-        position: absolute;
-        left: 37vw;
-        top: 30vw;
-        font-size: 20px;
-      }
-      footer{
-        position: relative;
-        top: -30vw;
-       }
-      }
+  .blob-btn {
+    position: absolute;
+    left: 41vw;
+    top: 19vw;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
 
-      @media only screen and (max-width: 450px) {
-        #buy{
-          position: relative;
-          top: 10vw;
-          height: 150vw;
-          width: 100vw;
-        }
+  }
 
-        #custom{
-          position: relative;
-          top: 0%;
-          left: 25vw;
-          font-size: 35px;
-        }
+@media only screen and (max-width: 670px) {
+  #buy{
+    position: relative;
+    top: 10vw;
+    height: 70vw;
+    width: 100vw;
+  }
 
-        .payinput {
-          position: relative;
-          left: -7vw;
-          top: -10vw;
-          font-size: 15px;
-        }
+  #custom{
+    position: relative;
+    top: 0%;
+    left: 37vw;
+    font-size: 35px;
+  }
 
-        .blob-btn {
-          position: absolute;
-          left: 30vw;
-          top: 30vw;
-          font-size: 20px;
-        }
-        footer{
-          position: relative;
-          top: -30vw;
-         }
-        }
+  .payinput {
+    position: relative;
+    top: 5vw;
+    font-size: 15px;
+  }
 
-        @media only screen and (max-width: 370px) {
-          #buy{
-            position: relative;
-            top: 10vw;
-            height: 150vw;
-            width: 100vw;
-          }
+  .blob-btn {
+    position: absolute;
+    left: 41vw;
+    top: 19vw;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
 
-          #custom{
-            position: relative;
-            top: 0%;
-            left: 20vw;
-            font-size: 35px;
-          }
+  }
 
-          .payinput {
-            position: relative;
-            left: -6vw;
-            top: -10vw;
-            font-size: 15px;
-          }
+@media only screen and (max-width: 600px) {
+  #buy{
+    position: relative;
+    top: 10vw;
+    height: 70vw;
+    width: 100vw;
+  }
 
-          .blob-btn {
-            position: absolute;
-            left: 27vw;
-            top: 35vw;
-            font-size: 20px;
-          }
-          footer{
-            position: relative;
-            top: -30vw;
-           }
-          }
+  #custom{
+    position: relative;
+    top: 0%;
+    left: 36vw;
+    font-size: 35px;
+  }
+
+  .payinput {
+    position: relative;
+    top: 5vw;
+    font-size: 15px;
+  }
+
+  .blob-btn {
+    position: absolute;
+    left: 39vw;
+    top: 22vw;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  }
+
+@media only screen and (max-width: 555px) {
+  #buy{
+    position: relative;
+    top: 10vw;
+    height: 80vw;
+    width: 100vw;
+  }
+
+  #custom{
+    position: relative;
+    top: 0%;
+    left: 35vw;
+    font-size: 33px;
+  }
+
+  .payinput {
+    position: relative;
+    top: 9vw;
+    font-size: 15px;
+  }
+
+  .blob-btn {
+    position: absolute;
+    left: 37vw;
+    top: 28vw;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  }
+
+@media only screen and (max-width: 482px) {
+  #buy{
+    position: relative;
+    top: 10vw;
+    height: 110vw;
+    width: 100vw;
+  }
+
+  #custom{
+    position: relative;
+    top: 0%;
+    left: 33vw;
+    font-size: 32px;
+  }
+
+  .payinput {
+    position: relative;
+    top: 10vw;
+    font-size: 15px;
+  }
+
+  .blob-btn {
+    position: absolute;
+    left: 35vw;
+    top: 35vw;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  }
+
+@media only screen and (max-width: 380px) {
+  #buy{
+    position: relative;
+    top: 10vw;
+    height: 140vw;
+    width: 120vw;
+  }
+
+  #custom{
+    position: relative;
+    top: 0%;
+    left: 35vw;
+    font-size: 32px;
+  }
+
+  .payinput {
+    position: relative;
+    left: -5vw;
+    top: -10vw;
+    font-size: 15px;
+  }
+
+  .blob-btn {
+    position: absolute;
+    left: 37vw;
+    top: 37vw;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+ }
+
 
 #myVideoback {
   position: fixed;
